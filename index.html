@@ -2,14 +2,743 @@
 <html>
 <head>
 	<title>piano</title>
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Roboto|Roboto+Slab:700" rel="stylesheet">
+	<meta charset="utf-8">
 	<style>
-		div { margin: auto; }
-		img { width: 100%; }
+		body { overflow: hidden; }
+		div p { margin:0; padding:0; border:0; outline:0; }
+		nav ul { list-style: none; }
+		ul { margin:0; padding:0; border:0; outline:0; }
+		li { list-style: none; vertical-align: baseline; }
+		a { text-decoration: none; }
+
+		#remoteC { width: 100%; height: 60px; background: transparent;
+			position: fixed; top: -80px; z-index: 5; transition: 0.5s; transition-delay: 0.8s; }
+		#nameBox { position: relative; width: 154px; height: 60px; left: 0px; padding-left: 200px; padding-right: 40px; line-height: 60px; float: left; }
+		#menuBox { position: relative; height: 60px; text-align: right; line-height: 60px; padding-right: 200px; right: 0px; }
+		#bandXDesign { cursor: pointer; }
+		#perFormance { cursor: pointer; }
+		#bback { width: 100%; position: fixed; height: 100%; top: 0; }
+
+		#backG { width: 100%; position: fixed; }
+		#bXBack { position: absolute; left:0; top:0; width: 100%; height: 100%; background: #ff7f00; transition: 0.5s; transition-delay: 0.4s; z-index: -2;
+		}
+
+		#bxLine { position: absolute; left: 200px; top: 40px; }
+		#bxName { position: absolute; right: 200px; bottom: 44px; }
+		#cainLogo { position: absolute; left: calc(50% - 180px); top: calc(50% - 180px); width: 360px;
+		opacity: 0.1; cursor: pointer; }
+
+		#headLine { position: fixed; left: 4%; top: 40px; transition: 0.5s; }
+		#myName { position: fixed; right: 4%; bottom: 44px; transition: 0.5s; }
+
+		#contentBox1 { transition: 0.4s; position: absolute; left: 0; background: #ffffff; width: 100%; height: 100vh; }
+		#cont0Back { position: absolute; top: 0px; width: 100%; height: 100vh; overflow: hidden; background: #1c1c1c; }
+		#cainBack { width: 100%; opacity: 0.1;}
+
+		#contentBox2 { position: relative; background: #ffffff; width: 100%; height: 100vh; }
+		#cont2bot { position: absolute; bottom: -160px; width: 100%; height: 160px;
+			transition: 0.5s; transition-delay: 0.4s; display: none; }
+		#vidList { position: relative; width: calc(100% - 360px); height: 120px;
+			padding: 0px 180px 40px 180px; overflow: hidden; }
+
+		#contentBox11 { transition: 0.4s; position: absolute; left: 100%; background: #ff7f00; width: 100%; height: 100vh; }
+		#cont1Back { position: absolute; top: 0px; width: 100%; height: 100vh; overflow: hidden; background: white; }
+		#metal { width: 100%; opacity: 0; }
+		#contentBox111 { transition: 0.4s; position: absolute; left: 200%; background: #ffffff; width: 100%; height: 100vh; }
+		#joyfulSlogan { transition: 0.4s; position: absolute; left: 0; width: 100%; height: 100vh; top: -200vh; z-index: 4; overflow: hidden; background: #2c2c2c; }
+		#joyful { width: 100%; position: relative; top: calc(50% - 210px); }
+
+		#contentBox1111 { transition: 0.4s; position: absolute; left: 300%; background: #ffffff; width: 100%; height: 100vh;  }
+		#coreBox { position: absolute; width: 1080px; left: calc(50% - 540px); top: calc(50% - 290px); }
+		#coreBack { transition: 0.2s; position: absolute; top: 0px; width: 100%; height: 100vh; overflow: hidden; background: white; }
+		#coreVBack { transition: 0.2s; width: 100%; opacity: 0; }
+
+		#contentBox11111 { transition: all 0.4s ease 0s; top: 0px; position: absolute; left: 400%; background: #ffffff; width: 100%; height: 100vh; overflow: hidden;  }
+		#logoBox { position: absolute; width: 400px; height: 400px; left: calc(50% - 200px); top: calc(50% - 200px)	;
+			background: white; }
+		#logoBoxImg { transition: 0.2s; position: absolute;
+			left: calc(50% - 200px); top: calc(50% - 200px); width: 400px; }
+		#logoBoxImg2 { transition: 0.2s; position: absolute;
+			left: calc(50% - 200px); top: calc(50% - 200px); width: 400px; opacity: 0; }
+		#waggus { position: absolute; left: 0; width: 100%; opacity: 0; }
+
+		#waggu { width: 100%; }
+
+		#contentBoxB1 { transition: all 0.4s ease 0s; top: 100vh; position: absolute; left: 0px; background: #fbffe1; width: 100%; height: 100vh; overflow: hidden; }
+		#contentBoxB2 { transition: all 0.4s ease 0s; top: 100vh; position: absolute; left: 0px; background: #fbffe1; width: 100%; height: 100vh; overflow: hidden; }
+		#contentBoxB3 { transition: all 0.4s ease 0s; top: 100vh; position: absolute; left: 0px; background: #ff7f00; width: 100%; height: 100vh; overflow: hidden; }
+
+
+		#pfBox { background: #ffffff; position: fixed; bottom: -50%; transition: 0.5s; cursor: pointer; }
+		#bxBox { background: #ff7f00; position: fixed; top: -50%; transition: 0.5s; cursor: pointer; }
+
+		#bxText { position: fixed; left: 20px; top: calc(-25% - 15em);
+			vertical-align: middle; color: #ff7f00; cursor: pointer; }
+		#pfText { position: fixed; left: 20px; bottom: calc(-25% - 15em);
+			vertical-align: middle; color: #ffffff; cursor: pointer; }
+
+		.bubblee { transition: 0.2s; float: left; border-radius: 280px; width: 280px; height: 280px;}
+		#bubble11 { border: 5px solid #C10000; color: #C10000; margin-right: 100px; }
+		#bubble22 { border: 5px solid #1bc92b; color: #1bc92b; }
+		#bubble33 { border: 5px solid #0013C1; color: #0013C1; margin-left: 100px;}
+		
+		.redblack { color: #C10000; }
+		.orange { color: #ff7f00; }
+		.bGrey { color: #2c2c2c; }
+		.white { color: #ffffff; }
+
+		.headFont { font-size: 2em; line-height: 1.5em; margin: 0px;}
+		.bodyFont { font-size: 1.5em; line-height: 1.5em; margin: 0px;}
+		.contentFont { word-break: keep-all; font-size: 1.1em; line-height: 1.65em; }
+		.bubbleFont { font-size: 1.2em; }
+		.menuFont { font-size: 0.8em; }
+		.nameFont { font-size: 1.1em; }
+		.bigFont { font-size: 4.5em; line-height: 1.2em; }
+
+		.bubbleText { line-height: 1.3em; cursor: default; }
+		.bubbleText2 { line-height: 0em; padding-top: 140px; cursor: default; }
+
+		.centerBig { position: relative; top: calc(62vh - 1.6em); transition: 0.2s;}
+
+		.lgsystemImg { transition: 0.4s; width: 1280px; position: absolute; left: calc(50% - 640px); top: calc(50vh - 270px); }
+		.lgsystemImg2 { transition: 0.4s; width: 1280px; position: absolute; left: calc(50% - 640px); top: calc(50vh - 100px); }
+		.lgsystemImg3 { transition: 0.4s; width: 1280px; position: absolute; left: calc(50% - 640px); top: 100vh; }
+
+		.acenter { text-align: center; }
+		.aRight { text-align: right; }
+
+		.notoK { font-family: 'Noto Sans KR', sans-serif; }
+		.roboto { font-family: 'Roboto', sans-serif; }
+		.robotoS { font-family: 'Roboto Slab', serif; }
+
+		.opac08 { opacity: 0.8; }
+
+		.urls { position: relative; padding-left: 200px; }
+		.urlss { position: relative; padding-left: 40px; float: left; }
+
+		.thin { font-weight: 200; }
+		.bold { font-weight: bold; }
+		.medium { font-weight: 500; }
+		.aRight { text-align: right; }
+		.fLeft { float: left; }
+		.fRight { float: right; }
+
+		.cBOX { overflow: hidden; }
+
+		.mainContent { position: relative; width: 40%; height:100%; }
+		.mainContentR { position: relative;  width: 60%; height:100%; }
+		.contentText { padding: 80px 40px 0px 200px; width: calc(100% - 240px);}
+		.contentRText { padding: 80px 200px 0 40px; width: calc(100% - 240px);}
+		.contentRRText { padding: 80px 200px 0 20px; width: calc(100% - 220px);}
+
+		.vidvid { position: relative; width: calc(100% - 220px); height: 400px;
+			padding: 120px 15px 0 195px; }
+		.vidBox { position: relative; width: 201px; height: 120px; background: black; margin: 0 15px; float: left; cursor: pointer; }
+
+		.halfBox { width: 100%; height: 50%; }
+		.halfText { margin: 0; font-size: 10em; transition: 0.5s; }
+
 	</style>
 </head>
 <body>
-	<div>
-		<img src="ex001.png">
+	<div id="bXBack">
+		<div id="bxLine">
+			<p class="white headFont bold roboto">Hankyong Nat'l University Rock Band, CAIN</p>
+			<p class="white bodyFont roboto">Joyful college life with Rock & Roll</p>
+		</div>
+		<div id="bxName">
+			<p class="white bodyFont aRight roboto">Band eXperience Design</p>
+			<p class="white bodyFont bold aRight roboto">Seonghun Jang</p>
+		</div>
+		<img id="cainLogo" src="cainLg.png">
 	</div>
+	<div id="remoteC">
+		<div id="nameBox">
+			<a href="index.html" class="nameFont robotoS white"><span id="JSH">Seonghun Jang</span></a>
+		</div>
+		<div id="menuBox" class="fRight">
+			<ul class="uili">
+				<li class="urlss"><a class="menuFont roboto bold white"><span id="bandXDesign">Band X Design</span></a></li> 
+				<li class="urlss"><a class="menuFont roboto bold white"><span id="perFormance">Performance</span></a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="bback">
+		<img id="backG" src="cainmain1.jpg">
+		<div id="headLine">
+			<p class="orange headFont bold roboto">Band eXperience Design & Performances</p>
+			<p class="orange bodyFont roboto">in Hankyong Nat'l University Rock Band, CAIN</p>
+			</div>
+		<div id="myName">
+			<p class="orange bodyFont aRight roboto">Designer & Bassist</p>
+			<p class="orange bodyFont bold aRight roboto">Seonghun Jang</p>
+		</div>
+	</div>
+	<div id="contentBox1" class="fLeft" style="display: none">
+		<div id="cont0Back"><img id="cainBack" src="cain6.jpg"></div>
+		<div class="mainContent fLeft">
+			<div class="contentText"><img id="waggu" src="cain5.jpg"></div>
+		</div>
+		<div class="mainContentR fLeft">
+			<div class="contentRText"><p class="bigFont white bold notoK">카인은<br>국립한경대학교의<br>록 밴드 동아리입니다.</p><p id="typer" class="contentFont white notoK"><br>1980년에 창설된 카인은 국립한경대학교 중앙동아리의 세 밴드 동아리 중에서도,<br>록 음악을 중심으로 공연하는 밴드입니다. 즐거운 공연 뿐만 아니라 카인은 동아리 회원 모두 함께 행복한 대학 생활을 하는 것 또한 추구합니다.</p></div>
+		</div>
+	</div>
+	<div id="contentBox11" class="fLeft" style="display: none;">
+		<div class="mainContent fLeft">
+			<div class="contentText"><p class="contentFont white bold roboto">Overview</p></div>
+		</div>
+		<div class="mainContentR fLeft">
+			<div class="contentRText"><p class="contentFont white notoK bold">한국 사회에서의 록 음악의 이미지 덕인지, 카인은 자극적이고 강한 음악을 좋아하는 특이한 사람들이 모여있는 동아리일 것이다라는 선입견이 있었습니다. 그래서인지 과거에는 세 밴드 동아리 중에서 동아리 회원 수가 유독 적은 편이였습니다. 사실 록 음악은 자극적인 음악이기도 하지만 동시에 굉장히 촉촉히 감성을 적시기도 하고, 듣는 이들의 마음을 산뜻하게도 하는 폭 넓은 장르입니다. 록 음악과 우리 동아리에 대한 오해를, 즉 카인을 접하는 이들의 경험을 저는 디자인을 통해 바꾸어줄 수 있다고 생각하고 2018년 한 해 동안, 동아리의 회장 직을 맡음과 동시에 밴드 경험 디자인, Band eXperience Design에 도전합니다.<br><br>
+			기타와 드럼을 비롯한 여러 악기의 조화는 강렬하다 여겨지기 충분하지만, 그 속에는 여러 감각을 깨우는 선율과 파동의 섬세한 속삭임도 공존합니다. 저는 학우들에게 록 음악이 가지는 다양한 색깔을, 그런 따뜻하고 즐거운 음악을 함께 즐기는 우리 동아리의 행복함을 시각적으로 전달하는데에 초점을 맞췄습니다. <br><br>
+			이를 위해서 먼저 카인과 카인의 회원들이 과연 어떤 밴드이기를, 어떤 동아리이기를 원하는지 정립하고, 카인의 아이덴티티를 표현해주는 요소들을 정비했습니다. </p></div>
+		</div>
+	</div>
+	
+	<div id="contentBox111" class="fLeft" style="display: none;">
+		<div id="joyfulSlogan">
+			<img id="joyful" src="Slogan.png">
+		</div>
+		<div class="mainContent fLeft">
+			<div class="contentText"><p id="idenText" style="z-index: 6;" class="bigFont orange robotoS bold centerBig">Identity<br>&nbsp;&nbsp;&nbsp;&nbsp;& Slogan</p></div>
+		</div>
+		<div class="mainContentR fLeft">
+			<div class="contentRText"><p class="bodyFont robotoS bold bGrey"><br>Joyful college life with Rock & Roll</p><p class="contentFont notoK bold bGrey"><br>카인은 대학교의 동아리 밴드이기 때문에 갖는 분명한 한계점이 존재합니다. 매년 소속된 회원들에 변동이 생기며, 그들이 좋아하고 공연하고 싶어하는 록 음악의 성향 또한 매년 달라집니다. <br><br>
+			매년 달라지는 구성원과 그들의 기호와는 달리, 변하지 않을 카인의 정체성이 있다면 그것은 '한경대학교에서 록 음악을 좋아하는 사람들이 모여, 함께 대학 생활을 즐기며 록 음악을 공연하는 밴드'라는 개념일 것입니다. 이러한 개념을 다듬고 확장시켜 저는 카인의 정체성을 'Joyful college life with Rock & Roll'을 축약해 "ROCK & ROLL" 로 정의내렸습니다. "ROCK & ROLL"은 카인의 오랜 건배사이기도 합니다. <br></p></div>
+		</div>
+	</div>
+	<div id="contentBox1111" class="fLeft" style="display: none;">
+		<div id="coreBack"><img id="coreVBack" src="cain2.jpg"></div>
+		<div class="mainContent fLeft">
+			<div class="contentText"><p id="coreValue" class="bigFont orange robotoS bold centerBig">Band<br>Core value</p></div>
+		</div>
+		<div class="mainContentR fLeft">
+			<div class="contentRText"><p id="valueText" class="contentFont notoK bold centerBig bGrey"><br>카인이 특징과 앞으로 나아갈 방향을 토대로 핵심 가치들을 도출해냈습니다.<br>밴드의 핵심 가치는 공연과 디자인 등 동아리 대내외 활동에 일관되게 적용되어 전달됩니다. </p></div>
+		</div>
+		<div id = "coreBox" class="fLeft">
+			<div id="bubble11" class="bubblee"><p id="bub01" class="bubbleText2 notoK bubbleFont acenter bold">밝고 긍정적인 에너지</p></div>
+			<div id="bubble22" class="bubblee"><p id="bub02" class="bubbleText2 notoK bubbleFont acenter bold">다양한 색깔의 록 음악</p></div>
+			<div id="bubble33" class="bubblee"><p id="bub03" class="bubbleText2 notoK bubbleFont acenter bold">매년 바뀌는 구성원</p></div>
+		</div>
+	</div>
+	<div id="contentBox11111" class="fLeft" style="display: none;">
+		<div class="fLeft">
+			<img id="waggus" src="waggus.png">
+			<div id="logoBox">
+				<img id="logoBoxImg" src="cainLogoframe.png">
+				<img id="logoBoxImg2" src="cainlogofullcolor.png">
+			</div>
+		</div>
+	</div>
+	<div id="contentBoxB1">
+		<div class="mainContent fLeft">
+			<div class="contentText"><p class="bigFont orange robotoS bold centerBig">Logo<br>&nbsp;&nbsp;&nbsp;& Symbol</p></div>
+		</div>
+		<div class="mainContentR fLeft">
+			<div class="contentRText"><p class="contentFont notoK bold bGrey">유명 미국 드라마 'SuperNatural'에는 The Mark of Cain이라는 악마적인 표식이 등장합니다. 이처럼 카인이라는 이름이 부정적인 뉘앙스로 느껴지는 이유는 아무래도 성경에 등장하는 카인이 인류 최초의 살인자로 등장하기 때문일 것입니다. 저는 기존 매체에서 나타난 카인의 표식이라는 이름의 악마적인 표식을 이용해, 모두가 즐겁고 행복한 밴드를 표현할 심볼을 제작했습니다. 로고는 록 음악의 쿨한 멋을 표현해줄 수 있도록 직선적인 느낌으로 디자인되었고, 심볼과의 톤 매칭에 중점을 두고 디자인했습니다.</p></div>
+		</div>
+	</div>
+	<div id="contentBoxB2">
+		<div class="fLeft">
+			<img id="lgs0" class="lgsystemImg" src="logosystem000.png">
+			<img id="lgs1" class="lgsystemImg" src="logosystem001.png" style="opacity: 0;">
+			<img id="lgs2" class="lgsystemImg2" src="logosystem002.png" style="opacity: 0;">
+			<img id="lgs3" class="lgsystemImg3" src="logosystem003.png" style="opacity: 0;">
+		</div>
+	</div>
+	<div id="contentBoxB3">
+		<div class="mainContent fLeft">
+			<div class="contentText"><p id="colorHead" class="contentFont white roboto bold">Color</p></div>
+		</div>
+		<div class="mainContentR fLeft">
+			<div class="contentRText"><p id="colorBody" class="contentFont white notoK bold">음악에 대한 열정과 본능을 상징하는 레드 컬러와 대학생의 젊음과 활동성을 상징하는 옐로우 컬러를 섞어 만든 강렬한 오렌지 컬러를 메인으로 사용합니다.</p></div>
+		</div>
+	</div>
+
+	<div id="contentBox2" style="display: none">
+		<div class="mainContentR fLeft">
+			<iframe id="iframeX" class="vidvid" src="https://www.youtube.com/embed/2jwcCcddhuE?list=PLcoQAaj9Z8f6-Op0CMt4z6Bxixunljpsm" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		<div class="mainContent fLeft">
+			<div class="contentRRText">
+				<p class="contentFont redblack roboto bold">Performance Video</p><p id="videoText" class="contentFont white notoK">2014년부터 2019년 3월까지 총 14번의 크고 작은 공연에 주로 베이스 세션 겸 코러스 보컬로 참여했습니다. 노래 부르는 것도 좋아하다보니 메인 보컬로 공연한 적도 있습니다. 대학교 생활의 대부분을 공연을 하며 지냈는데, 많은 공연들 중에도 특별히 인상 깊었던 몇가지 공연 영상들을 첨부했습니다.</p></div>
+		</div>
+	</div>
+	<div id="cont2bot">
+		<div id="vidList" class="">
+			<div id="vidno1" class="vidBox"></div><div id="vidno2" class="vidBox"></div><div id="vidno3" class="vidBox"></div><div id="vidno4" class="vidBox"></div><div id="vidno5" class="vidBox"></div>
+		</div>
+	</div>
+	<div id="bxBox" class="halfBox"></div>
+	<p id="bxText" class="halfText roboto bold">Band X Design</p>	
+	<div id="pfBox" class="halfBox"></div>
+	<p id="pfText" class="halfText roboto bold">Performance</p>
 </body>
+<script type="text/javascript">
+
+	
+	window.onmousewheel = function(e){
+		console.log(e.pageY);	
+	}
+	var remoteDown = "off"
+
+	window.onmouseover = function(e){
+		if(remoteDown == "on"){
+			if(e.pageY<120){
+				remoteC.style.top = "0px";
+				remoteC.style.transitionDelay = "0s";
+			}else if(e.pageY>120){
+				remoteC.style.top = "-80px";
+				remoteC.style.transitionDelay = "0.2s";
+			}
+		}
+	}
+
+	var gradient = "linear-gradient(rgb(0,45,60), rgb(0,20,30) 5%, rgb(0,20,30) 100%)";
+
+	bback.onclick = function(){
+		headLine.style.opacity = 0;
+		myName.style.opacity = 0;
+
+		bxBox.style.top = "0%";
+		bxText.style.top = "calc(25% - 48px)";
+		pfBox.style.bottom = "0%";
+		pfText.style.bottom = "calc(25% - 48px)";
+	}
+	bback.onmousewheel = function(){
+		headLine.style.opacity = 0;
+		myName.style.opacity = 0;
+
+		bxBox.style.top = "0%";
+		bxText.style.top = "calc(25% - 48px)";
+		pfBox.style.bottom = "0%";
+		pfText.style.bottom = "calc(25% - 48px)";
+	}
+	
+	bxBox.onmouseover = function(){
+		bxBox.style.opacity = 0.5;
+		bxText.style.color = "white"; }
+	bxBox.onmouseout = function(){
+		bxBox.style.opacity = 1;
+		bxText.style.color = "#ff7f00"; }
+	bxText.onmouseover = function(){
+		bxBox.style.opacity = 0.5;
+		bxText.style.color = "white"; }
+	bxText.onmouseout = function(){
+		bxBox.style.opacity = 1;
+		bxText.style.color = "#ff7f00"; }
+
+
+	pfBox.onmouseover = function(){
+		bxBox.style.background = "#C10000";
+		bxText.style.color = "#C10000";
+		pfBox.style.opacity = 0.2;
+		pfText.style.color = "#C10000";	}
+	pfBox.onmouseout = function(){
+		bxBox.style.background = "#FF7F00";
+		bxText.style.color = "FF7F00";
+		pfBox.style.opacity = 1;
+		pfText.style.color = "white"; }
+	pfText.onmouseover = function(){
+		bxBox.style.background = "#C10000";
+		bxText.style.color = "#C10000";
+		pfBox.style.opacity = 0.2;
+		pfText.style.color = "#C10000"; }
+	pfText.onmouseout = function(){
+		bxBox.style.background = "#FF7F00";
+		bxText.style.color = "FF7F00";
+		pfBox.style.opacity = 1;
+		pfText.style.color = "white"; }
+
+	function bxStart() {
+		pfBox.style.height = "0%";
+		bxBox.style.display = "none";
+		bXBack.style.zIndex = 2;
+		bXBack.style.opacity = 1;
+		bxText.style.top = "-100%";
+		pfText.style.display = "none";
+
+		bandXDesign.style.background = "white"
+		bandXDesign.style.color = "#2c2c2c";
+
+		bback.style.display = "none";
+		
+	}
+	function bxxStart() {
+		bXBack.style.top = "-100%";
+
+		contentBox1.style.zIndex = 1;
+		contentBox1.style.display = "block";
+		contentBox11.style.display = "block";
+		contentBox111.style.display = "block";
+		contentBox1111.style.display = "block";
+		contentBox11111.style.display = "block";
+
+		remoteC.style.top = 0; 
+	}
+	cainLogo.onmouseover = function (){cainLogo.style.opacity = 1;}
+	cainLogo.onmouseout = function (){cainLogo.style.opacity = 0.1;}
+	cainLogo.onclick = function() {
+		bxxStart();
+	}
+
+	bxBox.onclick = function() {bxStart();}
+	bxText.onclick = function() {bxStart();}
+	function pfStart() {
+		bxBox.style.height = "0px";
+		bxBox.style.background = "#C10000";
+		pfBox.style.height = "0%";
+		bxBox.style.opacity = 1;
+		bxText.style.top = "-100%";
+		pfText.style.display = "none";
+
+		perFormance.style.color = "#E2FF66";
+
+		contentBox2.style.display = "block";
+		contentBox2.style.background = "#2c2c2c";
+		cont2bot.style.display = "block";
+		cont2bot.style.bottom = 0;
+		bback.style.display = "none";
+		bXBack.style.display = "none";
+
+		remoteDown = "on"
+		remoteC.style.top = 0;
+	}
+
+	pfBox.onclick = function() {pfStart();}
+	pfText.onclick = function() {pfStart();}
+
+	function bxClose(){
+		contentBox1.style.display = "none";
+		contentBox11.style.display = "none";
+		contentBox111.style.display = "none";
+		contentBox1111.style.display = "none";
+		contentBox11111.style.display = "none";
+		bandXDesign.style.color = "white";
+	}
+	function pfClose(){
+		contentBox1.style.display = "block";
+		contentBox11.style.display = "block";
+		contentBox111.style.display = "block";
+		contentBox1111.style.display = "block";
+		contentBox11111.style.display = "block";
+		contentBox2.style.display = "none";
+		cont2bot.style.display = "none";
+		perFormance.style.color = "white";
+	}
+
+	bandXDesign.onclick = function() {
+		bxStart();
+		pfClose();
+		remoteC.style.transitionDelay = "0s";
+	}
+
+	perFormance.onclick = function() {
+		pfStart();
+		bxClose();
+		remoteC.style.transitionDelay = "0s";
+	}
+
+	contentBox1.onmousewheel = function() {
+		contentBox1.style.left = "-100%";
+		contentBox11.style.left = "0%";
+		contentBox111.style.left = "100%";
+		contentBox1111.style.left = "200%";
+		contentBox11111.style.left = "300%";
+
+		remoteDown = "on"
+		remoteC.style.top = "-80px";		
+		bandXDesign.style.color = "#FF7F00";
+	}
+
+	contentBox11.onmousewheel = function(e) {
+		if(e.deltaY>0){
+			contentBox1.style.left = "-200%";
+			contentBox11.style.left = "-100%";
+			contentBox111.style.left = "0%";
+			contentBox1111.style.left = "100%";
+			contentBox11111.style.left = "200%";
+
+			JSH.style.color = "#ff7f00";
+			bandXDesign.style.color = "white";
+			bandXDesign.style.background = "#ff7f00";
+			perFormance.style.color = "#ff7f00";
+
+		}else if(e.deltaY<0){
+			contentBox1.style.left = "0%";
+			contentBox11.style.left = "100%";
+			contentBox111.style.left = "200%";
+			contentBox1111.style.left = "300%";
+			contentBox11111.style.left = "400%";
+			remoteC.style.top = "0px";
+			bandXDesign.style.color = "#2c2c2c";
+		}
+		
+	}
+
+	var toggle = "off"
+	contentBox111.onmousewheel = function(e) {
+		if(e.deltaY<0){
+			toggle = "off"
+			contentBox1.style.left = "-100%";
+			contentBox11.style.left = "0%";
+			contentBox111.style.left = "100%";
+			contentBox1111.style.left = "200%";
+			contentBox11111.style.left = "300%";
+			joyfulSlogan.style.top =  "-2160px";
+			idenText.style.fontSize = "4.5em";
+			idenText.style.top = "calc(62vh - 1.6em)";
+			idenText.style.transitionDelay = "0s";
+
+			JSH.style.color = "white";
+			bandXDesign.style.background = "white";
+			bandXDesign.style.color = "#ff7f00";
+			perFormance.style.color = "white";
+
+		}else if(e.deltaY>0){
+			if(toggle == "off"){
+				toggle = "on"
+				joyfulSlogan.style.top = "0px";
+				idenText.style.top = "0px";
+				idenText.style.fontSize = "3em";
+				idenText.style.transitionDelay = "0.2s";
+				bandXDesign.style.color = "#2c2c2c";
+
+
+			}else if(toggle == "on"){
+				contentBox1.style.left = "-300%";
+				contentBox11.style.left = "-200%";
+				contentBox111.style.left = "-100%"
+				contentBox1111.style.left = "0%";
+				contentBox11111.style.left = "100%";
+				bandXDesign.style.color = "white";
+			}
+		}
+		
+	}
+	var toggle2 = "off"
+	contentBox1111.onmousewheel = function(e) {
+		if(e.deltaY<0){
+			toggle2 = "off"
+			contentBox1.style.left = "-200%";
+			contentBox11.style.left = "-100%";
+			contentBox111.style.left = "0%";
+			contentBox1111.style.left = "100%";
+				document.getElementById("coreValue").innerHTML = "Band<br>Core value";
+				document.getElementById("bub01").innerHTML = "밝고 긍정적인 에너지";
+				document.getElementById("bub02").innerHTML = "다양한 색깔의 록 음악";
+				document.getElementById("bub03").innerHTML = "매년 바뀌는 구성원";
+				valueText.style.color = "#2c2c2c";
+				bubble11.style.background = "#ffffff";
+				bubble11.style.color = "#C10000";
+				bubble22.style.background = "#ffffff";
+				bubble22.style.color = "#1bc92b";
+				bubble33.style.background = "#ffffff";
+				bubble33.style.color = "#0013C1";
+				coreBack.style.background = "white";
+				coreVBack.style.opacity = 0;
+				bandXDesign.style.color = "#2c2c2c";
+
+		}else if(e.deltaY>0){
+			if(toggle2 == "off"){
+				toggle2 = "on"
+				document.getElementById("coreValue").innerHTML = "Design<br>Core value";
+				document.getElementById("bub01").innerHTML = "활동적이고 열정적인 디자인";
+				document.getElementById("bub02").innerHTML = "알록달록하고 쿨한 디자인";
+				document.getElementById("bub03").innerHTML = "단순하고 따라하기 쉬운 디자인";
+				valueText.style.color = "white";
+				bubble11.style.background = "#C10000";
+				bubble11.style.color = "white";
+				bubble22.style.background = "#1bc92b";
+				bubble22.style.color = "white";
+				bubble33.style.background = "#0013C1";
+				bubble33.style.color = "white";
+				coreBack.style.background = "black";
+				coreVBack.style.opacity = 0.5;
+				bandXDesign.style.color = "#2c2c2c";
+
+			}else if(toggle2 == "on"){
+				toggle2 = "off"
+				contentBox1.style.left = "-400%";
+				contentBox11.style.left = "-300%";
+				contentBox111.style.left = "-200%"
+				contentBox1111.style.left = "-100%";
+				contentBox11111.style.left = "0%";
+				bandXDesign.style.color = "white";
+			}
+		}
+	}
+
+	var h  = window.innerHeight;
+	console.log(h);
+	
+
+	var toggle3 = "off"
+	contentBox11111.onmousewheel = function(e) {
+		if(e.deltaY<0){
+			toggle3 = "off"
+			contentBox1.style.left = "-300%";
+			contentBox11.style.left = "-200%";
+			contentBox111.style.left = "-100%";
+			contentBox1111.style.left = "0%";
+			contentBox11111.style.left = "100%";
+
+			logoBoxImg.style.opacity = 1;
+			logoBoxImg2.style.opacity = 0;
+			waggus.style.opacity = 0;
+			logoBox.style.boxShadow = "none";
+			bandXDesign.style.color = "#1c1c1c";
+
+		}else if(e.deltaY>0){
+			if(toggle3 == "off"){
+				toggle3 = "on"
+				logoBoxImg.style.opacity = 0;
+				logoBoxImg2.style.opacity = 1;
+				waggus.style.opacity = 1;
+				logoBox.style.boxShadow = "5px 5px 10px black";
+				bandXDesign.style.color = "#fbffe1";
+
+			}else if(toggle3 == "on"){
+				toggle3 = "off"
+				contentBox11111.style.top = - h - 1 + "px";
+				contentBoxB1.style.top = 0 + "px";
+			}
+		}
+
+		
+	}
+	contentBoxB1.onmousewheel = function(e) {
+		if(e.deltaY<0){
+			contentBox11111.style.top = "0px";
+			contentBoxB1.style.top = "100vh";
+		}else if(e.deltaY>0){
+			contentBoxB1.style.top = - h - 1 + "px";
+			contentBoxB2.style.top = "0px";
+		}
+	}
+
+	var ranK = "rank1";
+
+	contentBoxB2.onmousewheel = function(e){
+		if(e.deltaY<0){
+			if(ranK == "rank1"){
+				contentBoxB1.style.top = "0px";
+				contentBoxB2.style.top = "100vh";
+			}else if(ranK == "rank2"){
+				ranK = "rank1"
+				lgs0.style.opacity = 1;
+				lgs1.style.opacity = 0;
+				lgs2.style.opacity = 0;
+			}else if(ranK == "rank3"){
+				ranK = "rank2"
+				lgs0.style.opacity = 0;
+				lgs1.style.opacity = 1;
+				lgs2.style.opacity = 0;
+			}else if(ranK == "rank4"){
+				ranK = "rank3"
+				lgs0.style.opacity = 0;
+				lgs1.style.opacity = 0;
+				lgs2.style.opacity = 1;
+				lgs2.style.top = "calc(50vh - 100px)";
+				lgs3.style.opacity = 0;
+				lgs3.style.top = "100vh";
+			}
+		}else if(e.deltaY>0){
+			if(ranK == "rank1"){
+				ranK = "rank2"
+				lgs0.style.opacity = 0;
+				lgs1.style.opacity = 1;
+				lgs2.style.opacity = 0;
+			}else if(ranK == "rank2"){
+				ranK = "rank3"
+				lgs0.style.opacity = 0;
+				lgs1.style.opacity = 0;
+				lgs2.style.opacity = 1;
+				lgs3.style.opacity = 0;
+			}else if(ranK == "rank3"){
+				ranK = "rank4"
+				lgs0.style.opacity = 0;
+				lgs1.style.opacity = 0;
+				lgs2.style.opacity = 1;
+				lgs2.style.top = "calc(50vh - 270px)";
+				lgs3.style.opacity = 1;
+				lgs3.style.top = "calc(50vh - 70px)";
+			}else if(ranK == "rank4"){
+				contentBoxB2.style.top = - h - 1 + "px";
+				contentBoxB3.style.top = "0px";
+				JSH.style.color = "white";
+				bandXDesign.style.color = "#ff7f00";
+				bandXDesign.style.background = "white";
+				perFormance.style.color = "white";
+			}
+		}
+	}
+
+	var ranKK = "rank1"
+
+	contentBoxB3.onmousewheel = function(e){
+		if(e.deltaY<0){
+			if(ranKK == "rank1"){
+				contentBoxB2.style.top = "0px";
+				contentBoxB3.style.top = "100vh";
+				JSH.style.color = "#FF7F00";
+				bandXDesign.style.background = "#FF7F00";
+				bandXDesign.style.color = "#fbffe1";
+				perFormance.style.color = "#ff7f00";
+
+			}else if(ranKK == "rank2"){
+
+				ranKK = "rank1"
+				contentBoxB3.style.background = "#ff7f00";
+				colorHead.style.color = "white";
+				colorBody.style.color = "white";
+				document.getElementById("colorBody").innerHTML = "음악에 대한 열정과 본능을 상징하는 레드 컬러와 대학생의 젊음과 활동성을 상징하는 옐로우 컬러를 섞어 만든 강렬한 오렌지 컬러를 메인으로 사용합니다.";
+				JSH.style.color = "white";
+				bandXDesign.style.background = "white";
+				bandXDesign.style.color = "#FF7F00"
+				perFormance.style.color = "white";
+
+			}else if(ranKK == "rank3"){
+				ranKK = "rank2"
+			}
+		}else if(e.deltaY>0){
+			if(ranKK == "rank1"){
+				ranKK = "rank2"
+				contentBoxB3.style.background = "#E2FF66";
+				colorHead.style.color = "#ff7f00";
+				colorBody.style.color = "#1c1c1c";
+				document.getElementById("colorBody").innerHTML = "배경색인 밝은 그린 컬러는 구성원 간의 조화와 편안한 동아리 방을 상징합니다.";
+				JSH.style.color = "#FF7F00";
+				bandXDesign.style.color = "#E2FF66"
+				bandXDesign.style.background = "#ff7f00"
+				perFormance.style.color = "#ff7f00";
+
+			}else if(ranKK == "rank2"){
+				ranKK = "rank3"
+			}
+		}
+	}
+	
+	vidno1.onclick = function() {
+		iframeX.setAttribute("src", "https://www.youtube.com/embed/vgsbBFb6IEo?list=PLGKeKmjjoPYwpJzDVjGVewf0cEnnNADEE")
+		document.getElementById("videoText").innerHTML = "Don't look back in anger - Oasis<br>2014년 1학기 카인 정기공연.<br>제가 베이스를 잡고 처음 무대에 오른 공연입니다. 많이 어색하고 부족한 시절이었습니다.";
+	}
+	vidno2.onclick = function() {
+		iframeX.setAttribute("src", "https://www.youtube.com/embed/RmnA09w8flA?list=PLGKeKmjjoPYylf2TSiVKqMiguvXEyo9Sy")
+		document.getElementById("videoText").innerHTML = "Without a fight - Hoobastank<br>2017년 2학기 카인 정기공연.<br>군 복무를 마치고 본격적으로 밴드 활동을 시작한 시기의 공연입니다. 꾸준히 연습해서 제법 무르익어 보이는 연주가 가능해졌지만 아직 코러스는 버거워보입니다.";
+	}
+	vidno3.onclick = function() {
+		iframeX.setAttribute("src", "https://www.youtube.com/embed/7wFmOsJpWy8?list=PLGKeKmjjoPYxbrB2Cp7VFLoRTNoqLImmF")
+		document.getElementById("videoText").innerHTML = "Hysteria - MUSE<br>2018년 1학기 카인 정기공연.<br>제가 지금까지 베이스를 치게 만든 노래, MUSE의 Hysteria를 밴드 회장이 된 해에 공연했습니다.<br> 지금 보니 퀄리티는 다소 아쉽지만 그래도 이 곡을 관중들 앞에서 연주했다는 사실만으로도 무언가 벅차올랐던 공연이였습니다.";
+	}
+	vidno4.onclick = function() {
+		iframeX.setAttribute("src", "https://www.youtube.com/embed/86icopVkf8Y?list=PLcoQAaj9Z8f6-Op0CMt4z6Bxixunljpsm")
+	}
+	vidno5.onclick = function() {
+		iframeX.setAttribute("src", "https://www.youtube.com/embed/86icopVkf8Y?list=PLcoQAaj9Z8f6-Op0CMt4z6Bxixunljpsm")
+	}
+
+
+</script>
 </html>
