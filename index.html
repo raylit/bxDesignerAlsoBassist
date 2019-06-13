@@ -18,6 +18,13 @@
 		li { list-style: none; vertical-align: baseline; }
 		a { text-decoration: none; }
 
+		#bassistJSH { transition: 0.4s; position: relative; width: 100%; }
+		#bassHead { transition: 0.4s; position: absolute; right: 200px; top: 40px; }
+		#bassName { transition: 0.4s; position: absolute; left: 200px; bottom: 60px; }
+
+		#logoAgain { position: absolute; width: 400px; height: 400px; left: calc(50% - 200px); top: calc(50% - 200px);  }
+		#logoAgainimg { width: 100%; }
+
 		#remoteC { width: 100%; height: 60px; background: transparent;
 			position: fixed; top: -80px; z-index: 5; transition: 0.5s; transition-delay: 0.8s; }
 		#nameBox { position: relative; width: 154px; height: 60px; left: 0px; padding-left: 200px; padding-right: 40px; line-height: 60px; float: left; }
@@ -31,7 +38,7 @@
 		}
 
 		#bxLine { position: absolute; left: 200px; top: 40px; }
-		#bxName { position: absolute; right: 200px; bottom: 44px; }
+		#bxName { position: absolute; right: 200px; bottom: 60px; }
 		#cainLogo { position: absolute; left: calc(50% - 180px); top: calc(50% - 180px); width: 360px;
 		opacity: 0.1; cursor: pointer; }
 
@@ -42,11 +49,17 @@
 		#cont0Back { position: absolute; top: 0px; width: 100%; height: 100vh; overflow: hidden; background: #1c1c1c; }
 		#cainBack { width: 100%; opacity: 0.1;}
 
-		#contentBox2 { position: relative; background: #ffffff; width: 100%; height: 100vh; }
-		#cont2bot { position: absolute; bottom: -160px; width: 100%; height: 160px;
-			transition: 0.5s; transition-delay: 0.4s; display: none; }
-		#vidList { position: relative; width: calc(100% - 360px); height: 120px;
-			padding: 0px 180px 40px 180px; overflow: hidden; }
+		#contentBox2 { transition: all 0.8s ease 0s; position: absolute; background: #2c2c2c; width: 100%; height: 100vh; left: 0; top: 0vh;}
+		#contentBox22 { transition: all 0.8s ease 0s;; position: absolute; background: #2c2c2c; width: 100%; height: 100vh; left: 0; top: 0vh; opacity: 0; transition-delay: 0.8s }
+		#contentBox222 { transition: all 0.8s ease 0s;; position: absolute; background: #2c2c2c; width: 100%; height: 100vh; left: 0; top: 0vh; opacity: 0; transition-delay: 0.8s; }
+		#cont22Back { position: absolute; top: 0px; width: 100%; height: 100vh; overflow: hidden; background: #2c2c2c; }
+		#bassistBack { width: 100%; opacity: 0.6;}
+		#bassistBbaam { width: 100%; }
+
+
+		#cont2bot { position: absolute; right: 120px; top: 118px; width: 40px; height: 200px;
+			transition: 0.5s; }
+		#vidList { width: 40px; height: 200px; overflow: hidden; }
 
 		#contentBox11 { transition: 0.4s; position: absolute; left: 100%; background: #ff7f00; width: 100%; height: 100vh; }
 		#cont1Back { position: absolute; top: 0px; width: 100%; height: 100vh; overflow: hidden; background: white; }
@@ -75,6 +88,10 @@
 		#contentBoxB2 { transition: all 0.4s ease 0s; top: 100vh; position: absolute; left: 0px; background: #fbffe1; width: 100%; height: 100vh; overflow: hidden; }
 		#contentBoxB3 { transition: all 0.4s ease 0s; top: 100vh; position: absolute; left: 0px; background: #ff7f00; width: 100%; height: 100vh; overflow: hidden; }
 
+		#logoBox { position: absolute; width: 400px; height: 400px; left: calc(50% - 200px); top: calc(50% - 200px)	;
+			background: white; }
+		#logoBoxImg { transition: 0.2s; position: absolute;
+			left: calc(50% - 200px); top: calc(50% - 200px); width: 400px; }
 
 		#pfBox { background: #ffffff; position: fixed; bottom: -50%; transition: 0.5s; cursor: pointer; }
 		#bxBox { background: #ff7f00; position: fixed; top: -50%; transition: 0.5s; cursor: pointer; }
@@ -130,6 +147,8 @@
 		.fLeft { float: left; }
 		.fRight { float: right; }
 
+		.vidFont { line-height: 40px; }
+
 		.cBOX { overflow: hidden; }
 
 		.mainContent { position: relative; width: 40%; height:100%; }
@@ -140,8 +159,8 @@
 
 		.vidvid { position: relative; width: calc(100% - 220px); height: 400px;
 			padding: 120px 15px 0 195px; }
-		.vidBox { position: relative; width: 201px; height: 120px; background: black; margin: 0 15px; float: left; cursor: pointer; }
-
+		.vidBox { position: relative; width: 40px; height: 40px; background: red; margin: 0px; cursor: pointer; }
+		.vidBox:hover { background: blue; }
 		.halfBox { width: 100%; height: 50%; }
 		.halfText { margin: 0; font-size: 10em; transition: 0.5s; }
 
@@ -154,7 +173,7 @@
 			<p class="white bodyFont roboto">Joyful college life with Rock & Roll</p>
 		</div>
 		<div id="bxName">
-			<p class="white bodyFont aRight roboto">Band eXperience Design</p>
+			<p class="white bodyFont aRight roboto">Designer</p>
 			<p class="white bodyFont bold aRight roboto">Seonghun Jang</p>
 		</div>
 		<img id="cainLogo" src="cainLg.png">
@@ -259,9 +278,11 @@
 		<div class="mainContentR fLeft">
 			<div class="contentRText"><p id="colorBody" class="contentFont white notoK bold">음악에 대한 열정과 본능을 상징하는 레드 컬러와 대학생의 젊음과 활동성을 상징하는 옐로우 컬러를 섞어 만든 강렬한 오렌지 컬러를 메인으로 사용합니다.</p></div>
 		</div>
+		<div id="logoAgain">
+			<img id="logoAgainimg" src="cainLgorange.png">
+		</div>
 	</div>
-
-	<div id="contentBox2" style="display: none">
+	<div id="contentBox222" style="display: none">
 		<div class="mainContentR fLeft">
 			<iframe id="iframeX" class="vidvid" src="https://www.youtube.com/embed/2jwcCcddhuE?list=PLcoQAaj9Z8f6-Op0CMt4z6Bxixunljpsm" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
@@ -269,12 +290,32 @@
 			<div class="contentRRText">
 				<p class="contentFont redblack roboto bold">Performance Video</p><p id="videoText" class="contentFont white notoK">2014년부터 2019년 3월까지 총 14번의 크고 작은 공연에 주로 베이스 세션 겸 코러스 보컬로 참여했습니다. 노래 부르는 것도 좋아하다보니 메인 보컬로 공연한 적도 있습니다. 대학교 생활의 대부분을 공연을 하며 지냈는데, 많은 공연들 중에도 특별히 인상 깊었던 몇가지 공연 영상들을 첨부했습니다.</p></div>
 		</div>
-	</div>
-	<div id="cont2bot">
+		<div id="cont2bot">
 		<div id="vidList" class="">
-			<div id="vidno1" class="vidBox"></div><div id="vidno2" class="vidBox"></div><div id="vidno3" class="vidBox"></div><div id="vidno4" class="vidBox"></div><div id="vidno5" class="vidBox"></div>
+			<div id="vidno1" class="vidBox"><p class="vidFont bodyfont acenter white bold roboto">1</p></div><div id="vidno2" class="vidBox"><p class="vidFont bodyfont acenter white bold roboto">2</p></div><div id="vidno3" class="vidBox"><p class="vidFont bodyfont acenter white bold roboto">3</p></div><div id="vidno4" class="vidBox"><p class="vidFont bodyfont acenter white bold roboto">4</p></div><div id="vidno5" class="vidBox"><p class="vidFont bodyfont acenter white bold roboto">5</p></div>
 		</div>
 	</div>
+	</div>
+	<div id="contentBox22" class="fLeft" style="display: none">
+		<div id="cont22Back"><img id="bassistBack" src="ssamhap02.jpg"></div>
+		<div class="mainContentR fLeft">
+			<div class="contentText"><p class="bigFont white bold notoK">장성훈은<br>카인의 디자이너이자<br>베이스 연주자였습니다.</p><p id="typer" class="contentFont white notoK"><br>고등학교 2학년 때 악기 연주를 하고 싶다는 생각이 들었고,<br>당시 집에 있던 악기라고는 누나가 예전에 구매했던 낡은 베이스가 전부였습니다.<br>창고에 누워있던 이 베이스를 꺼내들게 됨으로 장성훈은 그때부터 베이스를 연주하기 시작했습니다.</p></div>
+		</div>
+	</div>
+	<div id="contentBox2" style="display: none">
+		<img id="bassistJSH" src="ssamhap01.jpg">
+		<div id="bassHead">
+			<p class="white headFont aRight bold roboto">Hankyong Nat'l University Rock Band, CAIN</p>
+			<p class="white bodyFont aRight roboto">Joyful college life with Rock & Roll</p>
+		</div>
+		<div id="bassName">
+			<p class="white bigFont roboto">Bassist</p>
+			<p class="white bigFont bold roboto">Seonghun Jang</p>
+		</div>
+	</div>
+	
+	
+	
 	<div id="bxBox" class="halfBox"></div>
 	<p id="bxText" class="halfText roboto bold">Band X Design</p>	
 	<div id="pfBox" class="halfBox"></div>
@@ -366,6 +407,8 @@
 
 		bandXDesign.style.background = "white"
 		bandXDesign.style.color = "#2c2c2c";
+		perFormance.style.background = "transparent";
+		perFormance.style.color = "white";
 
 		bback.style.display = "none";
 		
@@ -384,7 +427,7 @@
 	}
 	cainLogo.onmouseover = function (){cainLogo.style.opacity = 1;}
 	cainLogo.onmouseout = function (){cainLogo.style.opacity = 0.1;}
-	cainLogo.onclick = function() {
+	bXBack.onclick = function() {
 		bxxStart();
 	}
 
@@ -401,12 +444,22 @@
 		perFormance.style.color = "#E2FF66";
 
 		contentBox2.style.display = "block";
-		contentBox2.style.background = "#2c2c2c";
-		cont2bot.style.display = "block";
-		cont2bot.style.bottom = 0;
+		contentBox22.style.display = "block";
+		contentBox22.style.background = "#2c2c2c";
+		contentBox222.style.display = "block";
 		bback.style.display = "none";
 		bXBack.style.display = "none";
 
+		bandXDesign.style.background = "transparent";
+		bandXDesign.style.color = "#white";
+		perFormance.style.background = "white";
+		perFormance.style.color = "#2c2c2c";
+		JSH.style.color = "white";
+
+	}
+
+	function pffStart() {
+		contentBox22.style.background = "#2c2c2c";
 		remoteDown = "on"
 		remoteC.style.top = 0;
 	}
@@ -420,7 +473,11 @@
 		contentBox111.style.display = "none";
 		contentBox1111.style.display = "none";
 		contentBox11111.style.display = "none";
+		contentBoxB1.style.display = "none";
+		contentBoxB2.style.display = "none";
+		contentBoxB3.style.display = "none";
 		bandXDesign.style.color = "white";
+		document.body.style.background = "#2c2c2c";
 	}
 	function pfClose(){
 		contentBox1.style.display = "block";
@@ -428,9 +485,15 @@
 		contentBox111.style.display = "block";
 		contentBox1111.style.display = "block";
 		contentBox11111.style.display = "block";
+		contentBoxB1.style.display = "block";
+		contentBoxB2.style.display = "block";
+		contentBoxB3.style.display = "block";
 		contentBox2.style.display = "none";
+		contentBox22.style.display = "none";
+		contentBox222.style.display = "none";
 		cont2bot.style.display = "none";
 		perFormance.style.color = "white";
+		document.body.style.background = "#fbffe1";
 	}
 
 	bandXDesign.onclick = function() {
@@ -725,6 +788,24 @@
 		}
 	}
 	
+	contentBox2.onclick = function(){
+		document.body.style.background = "#2c2c2c";
+		contentBox2.style.top = - h - 1 + "px";
+		bassistJSH.style.opacity = 0;
+		bassName.style.opacity = 0;
+		bassHead.style.opacity = 0;
+		contentBox22.style.opacity = 1;
+		remoteDown = "on"
+		remoteC.style.top = 0;
+	}
+
+	contentBox22.onclick = function(){
+		contentBox22.style.transitionDelay = "0s";
+		contentBox22.style.top = - h - 1 + "px";
+		contentBox22.style.opacity = 0;
+		contentBox222.style.opacity = 1;
+	}
+
 	vidno1.onclick = function() {
 		iframeX.setAttribute("src", "https://www.youtube.com/embed/vgsbBFb6IEo?list=PLGKeKmjjoPYwpJzDVjGVewf0cEnnNADEE")
 		document.getElementById("videoText").innerHTML = "Don't look back in anger - Oasis<br>2014년 1학기 카인 정기공연.<br>제가 베이스를 잡고 처음 무대에 오른 공연입니다. 많이 어색하고 부족한 시절이었습니다.";
