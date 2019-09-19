@@ -19,26 +19,29 @@
 		a { text-decoration: none; }
 
 		#bassistJSH { transition: 0.4s; position: relative; width: 100%; }
-		#bassHead { transition: 0.4s; position: absolute; right: 200px; top: 40px; }
-		#bassName { transition: 0.4s; position: absolute; left: 200px; bottom: 60px; }
+		#bassHead { transition: 0.4s; position: absolute; right: 13vw; top: 40px; }
+		#bassName { transition: 0.4s; position: absolute; left: 13vw; bottom: 60px; }
 
 		#logoAgain { position: absolute; width: 400px; height: 400px; left: calc(50% - 200px); top: calc(50% - 200px);  }
 		#logoAgainimg { width: 100%; }
 
-		#remoteC { width: 100%; height: 60px; background: transparent;
+		#remoteC { width: 100%; height: 60px; background: rgba(0,0,0,0.4);
 			position: fixed; top: -80px; z-index: 5; transition: 0.5s; transition-delay: 0.8s; }
+		#remoteGuide { width: 100%; height: 60px; background: transparent; position: fixed; top: 0px; z-index: -4; }
 		#nameBox { position: relative; width: 154px; height: 60px; left: 0px; padding-left: 13vw; padding-right: 40px; line-height: 60px; float: left; }
 		#menuBox { position: relative; height: 60px; text-align: right; line-height: 60px; padding-right: 13vw; right: 0px; }
 		#bandXDesign { cursor: pointer; }
 		#perFormance { cursor: pointer; }
+		#gaLlery { cursor: pointer; }
+		#conTact { cursor: pointer; }
 		#bback { width: 100%; position: fixed; height: 100%; top: 0; }
 
 		#backG { width: 100%; position: fixed; }
 		#bXBack { position: absolute; left:0; top:0; width: 100%; height: 100%; background: #ff7f00; transition: 0.5s; transition-delay: 0.4s; z-index: -2;
 		}
 
-		#bxLine { position: absolute; left: 200px; top: 40px; }
-		#bxName { position: absolute; right: 200px; bottom: 60px; }
+		#bxLine { position: absolute; left: 13vw; top: 40px; }
+		#bxName { position: absolute; right: 13vw; bottom: 60px; }
 		#cainLogo { position: absolute; left: calc(50% - 180px); top: calc(50% - 180px); width: 360px;
 		opacity: 0.1; cursor: pointer; }
 
@@ -52,14 +55,15 @@
 		#contentBox2 { transition: all 0.8s ease 0s; position: absolute; background: #2c2c2c; width: 100%; height: 100vh; left: 0; top: 0vh;}
 		#contentBox22 { transition: all 0.8s ease 0s;; position: absolute; background: #2c2c2c; width: 100%; height: 100vh; left: 0; top: 0vh; opacity: 0; transition-delay: 0.8s }
 		#contentBox222 { transition: all 0.8s ease 0s;; position: absolute; background: #2c2c2c; width: 100%; height: 100vh; left: 0; top: 0vh; opacity: 0; transition-delay: 0.8s; }
+		#contentBox2222 { transition: all 0.8s ease 0s;; position: absolute; background: #000000; width: 100%; height: 100vh; left: 0; top: 0vh; opacity: 0; transition-delay: 0.8s; }
 		#cont22Back { position: absolute; top: 0px; width: 100%; height: 100vh; overflow: hidden; background: #2c2c2c; }
 		#bassistBack { width: 100%; opacity: 0.6;}
 		#bassistBbaam { width: 100%; }
 
 
-		#cont2bot { position: absolute; right: 120px; top: 118px; width: 40px; height: 200px;
+		#cont2bot { position: absolute; right: 13vw; top: 40vh; width: 26vw; height: 25vh;
 			transition: 0.5s; }
-		#vidList { width: 40px; height: 200px; overflow: hidden; }
+		#vidList { width: 26	vw; height: 25vh; overflow: hidden; }
 
 		#contentBox11 { transition: 0.4s; position: absolute; left: 100%; background: #ff7f00; width: 100%; height: 100vh; }
 		#cont1Back { position: absolute; top: 0px; width: 100%; height: 100vh; overflow: hidden; background: white; }
@@ -93,10 +97,17 @@
 		#contentBoxB3 { transition: all 0.4s ease 0s; top: 100vh; position: absolute; left: 0px; background: #ff7f00; width: 100%; height: 100vh; overflow: hidden; }
 		#contentBoxB4 { transition: all 0.4s ease 0s; top: 100vh; position: absolute; left: 0px; background: #2c2c2c; width: 100%; height: 100vh; overflow: hidden; }
 
+		#sTheory { position: absolute; left: 42.5vw; bottom: 10.5vh; width: 45.5vw;}
+		#sTheory a:hover { background: #0013C1; color: #ff7f00; transition: 0.5s; }
+		#museAlbum { position: relative; width: 10vw; height: 10vw; background: blue; }
+		#museCover { position: relative; left: 0.2vw; top: 0.2vw; width: 9.6vw;  }
 
+		#contentG { transition: all 0.4s ease 0s; top: 100vh; position: absolute; left: 0px; height: 0px;
+			background: black; width: 100%; height: 100vh; overflow: hidden; }
 
+		#toFirst { position: absolute; left: 13vw; bottom: 15vh; }
 
-		#pfBox { background: #ffffff; position: fixed; bottom: -50%; transition: 0.5s; cursor: pointer; }
+		#pfBox { background: #0025a4; position: fixed; bottom: -50%; transition: 0.5s; cursor: pointer; }
 		#bxBox { background: #ff7f00; position: fixed; top: -50%; transition: 0.5s; cursor: pointer; }
 
 		#bxText { position: fixed; left: 0; top: calc(-25% - 4vw);
@@ -105,27 +116,33 @@
 			vertical-align: middle; color: #ffffff; cursor: pointer; width: 100vw; text-align: center; }
 
 		.bubblee { transition: 0.2s; float: left; border-radius: 18vw; width: 18vw; height: 18vw;}
-		#bubble11 { border: 5px solid #C10000; color: #C10000; margin-right: 8vw; }
-		#bubble22 { border: 5px solid #1bc92b; color: #1bc92b; }
-		#bubble33 { border: 5px solid #0013C1; color: #0013C1; margin-left: 8vw;}
+		#bubble11 { border: 1.5px solid #C10000; color: #C10000; margin-right: 8vw; }
+		#bubble22 { border: 1.5px solid #ff7f00; color: #ff7f00; }
+		#bubble33 { border: 1.5px solid #0013C1; color: #0013C1; margin-left: 8vw;}
 		
 		.redblack { color: #C10000; }
 		.orange { color: #ff7f00; }
 		.bGrey { color: #2c2c2c; }
+		.lGrey { color: #c1c1c1; }
 		.white { color: #ffffff; }
+		.blue { color: #0025a4; }
+
 
 		.headFont { font-size: 1.8vw; line-height: 1.5em; margin: 0px;}
 		.bodyFont { font-size: 1.3vw; line-height: 1.5em; margin: 0px;}
 		.contentFont { word-break: keep-all; font-size: 1.1vw; line-height: 1.65em; }
-		.bubbleFont { font-size: 1vw; }
+		.bubbleFont { font-size: 1.1vw; }
 		.menuFont { font-size: 0.7vw; }
 		.nameFont { font-size: 1vw; }
 		.bigFont { font-size: 4vw; line-height: 1.2em; }
+		.expFont { word-break: keep-all; font-size: 0.9vw; line-height: 1.72em; }
 
 		.bubbleText { line-height: 1.3em; cursor: default; }
 		.bubbleText2 { line-height: 0em; padding-top: 9vw; cursor: default; }
 
 		.centerBig { position: relative; top: 53.5vh; transition: 0.2s;}
+		.performBack { width: 100%; position: absolute; left:0; top:0; opacity: 0.8; transition: 0.8s; }
+		.opazero { opacity: 0; }
 
 		.lgsystemImg { transition: 0.4s; width: 1280px; position: absolute; left: calc(50% - 640px); top: calc(50vh - 270px); }
 		.lgsystemImg2 { transition: 0.4s; width: 1280px; position: absolute; left: calc(50% - 640px); top: calc(50vh - 100px); }
@@ -133,6 +150,31 @@
 
 		.tImg { position: relative; width: 100%; transition: 0.4s; top: 0px; left: 0px;}
 
+		.galContents { overflow: hidden; position: absolute; transition: 0.4s; cursor: pointer; }
+		.a3Poster { width: 8.2vw; height: 11.8vw; background: rgba(0,0,0,0.4); }
+		.a3PosterD { width: 16.8vw; height: 11.8vw ; background: rgba(0,0,0,0.4); }
+		.a3PosterDD { width: 16.8vw; height: 23.6vw; background: rgba(0,0,0,0.4); }
+		.backstage { width: 39.6vw; height: 23.6vw; background: rgba(0,0,0,0.4); }
+		.galExptext { width: 20vw; height: 11.8vw; background: transparent; }
+
+		.galImg { width: 100%; opacity: 0; transition: 0.2s; padding-bottom: 0.2vw}
+
+		.galImg2 { width: calc(50% - 0.2vw); height: 100%; opacity: 0; transition: 0.2s;}
+
+		.galImgHoriz { position: relative; width: 100%; opacity: 0; transition: 0.2s; }
+
+		.gBack { position: absolute; left:0; top:0; width:100vw; opacity: 0.8; transition: 0.4s; }
+		.noneBack { position: absolute; left:0; top:0; width:100vw; opacity: 0; transition: 0.4s; }
+
+		#galleryHead { position: absolute; right: 13vw; top: calc(7.5vh + 33.2vw); transition: 0.4s;}
+
+		#leaflet18 { left: 47.3vw; top: calc(7.5vh + 24vw); }
+		#poster191 { left: 30.2vw; top: calc(7.5vh + 12.2vw); }
+		#leaflet19 { left: 47.3vw; top: 7.5vh; }
+		#poster18 { left: 13vw; top: 7.5vh; }
+		#poster190 { left: 13vw; top: calc(7.5vh + 24vw); }
+		#backstage18 { left: 30.2vw; top: 7.5vh; }
+		#explainText { right: 13vw; top: 7.5vh; position: absolute; transition: 0.4s; }
 
 		.acenter { text-align: center; }
 		.aRight { text-align: right; }
@@ -149,24 +191,26 @@
 		.thin { font-weight: 200; }
 		.bold { font-weight: bold; }
 		.medium { font-weight: 500; }
+		.aLeft { text-align: left; }
 		.aRight { text-align: right; }
 		.fLeft { float: left; }
 		.fRight { float: right; }
 
-		.vidFont { line-height: 40px; }
+		.vidFont { line-height: 40px; padding-left: 0.1vw; font-size: 1.2vw; }
 
 		.cBOX { overflow: hidden; }
 
 		.mainContent { position: relative; width: 40%; height:100%; }
 		.mainContentR { position: relative;  width: 60%; height:100%; }
-		.contentText { padding: 10.5vh 40px 0px 13vw; width: calc(100% - 240px);}
-		.contentRText { padding: 10.5vh 13vw 0 40px; width: calc(100% - 240px);}
-		.contentRRText { padding: 10.5vh 13vw 0 20px; width: calc(100% - 220px);}
+		.contentText { padding: 10.5vh 2.5vw 0px 13vw; width: calc(100% - 240px);}
+		.contentRText { padding: 10.5vh 13vw 0 2.5vw; width: 45.5vw;}
+		.contentRRText { padding: 8.5vh 13vw 0 1vw; width: 26vw;}
+		.gallery { position: relative; padding: 12vh 13vw 0 13vw; width: 74vw; }
 
-		.vidvid { position: relative; width: calc(100% - 220px); height: 50vh;
-			padding: 120px 15px 0 195px; }
-		.vidBox { position: relative; width: 40px; height: 40px; background: red; margin: 0px; cursor: pointer; }
-		.vidBox:hover { background: blue; }
+		.vidvid { position: absolute; width: 46vw; height: 60vh;
+			left: 13vw; top: 8.5vh;}
+		.vidBox { position: relative; width: 26vw; height: 5vh; margin: 0px; cursor: pointer; }
+		.vidBox:hover { background: #0025a4; }
 		.halfBox { width: 100%; height: 50%; }
 		.halfText { margin: 0; font-size: 12.5vw; transition: 0.5s; }
 
@@ -192,8 +236,12 @@
 			<ul class="uili">
 				<li class="urlss"><a class="menuFont roboto bold white"><span id="bandXDesign">Band X Design</span></a></li> 
 				<li class="urlss"><a class="menuFont roboto bold white"><span id="perFormance">Performance</span></a></li>
+				<li class="urlss"><a class="menuFont roboto bold white"><span id="gaLlery">Gallery</span></a></li>
+				<li class="urlss"><a class="menuFont roboto bold white"><span id="conTact">Contact</span></a></li>
 			</ul>
 		</div>
+	</div>
+	<div id="remoteGuide">
 	</div>
 	<div id="bback">
 		<img id="backG" src="cainmain1.jpg">
@@ -244,7 +292,7 @@
 			<div class="contentText"><p id="coreValue" class="bigFont orange robotoS bold centerBig">Band<br>Core value</p></div>
 		</div>
 		<div class="mainContentR fLeft">
-			<div class="contentRText"><p id="valueText" class="contentFont notoK bold centerBig bGrey"><br>카인이 특징과 앞으로 나아갈 방향을 토대로 핵심 가치들을 도출해냈습니다.<br>밴드의 핵심 가치는 공연과 디자인 등 동아리 대내외 활동에 일관되게 적용되어 전달됩니다. </p></div>
+			<div class="contentRText"><p id="valueText" class="contentFont notoK bold centerBig bGrey"><br><br><br>카인이 특징과 앞으로 나아갈 방향을 토대로 핵심 가치들을 도출해냈습니다.<br>밴드의 핵심 가치는 공연과 디자인 등 동아리 대내외 활동에 일관되게 적용되어 전달됩니다. </p></div>
 		</div>
 		<div id = "coreBox" class="fLeft">
 			<div id="bubble11" class="bubblee"><p id="bub01" class="bubbleText2 notoK bubbleFont acenter bold">밝고 긍정적인 에너지</p></div>
@@ -302,20 +350,49 @@
 				<p id="typebody" class="contentFont white notoK bold">헤드라인 타입 영문: Rockwell Condensed Bold<br>
 				카인의 영문 헤드라인 서체입니다. 록 음악에는 촉촉하고 감성적이고 우아한 음악에 힘 있고 유쾌한 음악까지 다양한 장르를 아우르기 때문에 세리프와 산세리프의 중간적인 느낌을 띄면서 적절한 힘이 느껴지는 서체를 선택했습니다. 이름 역시 Rock을 Well하게 해줄 것만 같아 카인의 서체로 적절하다고 생각했습니다.</p></div>
 		</div>
+		<div id="toFirst"><p class="notoK bigFont white bold">처음으로</p></div>
 	</div>
-	<div id="contentBox222" style="display: none">
+	<div id="contentBox2222" style="display: none">
+		<img id="vidBack" src="2018-1-Back.png" class="performBack">
+		<img id="vidBack01" src="2017-2-Back.png" class="performBack opazero">
+		<img id="vidBack02" src="southandnorth.png" class="performBack opazero">
+		<img id="vidBack03" src="ssam001.png" class="performBack opazero">
 		<div class="mainContentR fLeft">
-			<iframe id="iframeX" class="vidvid" src="https://www.youtube.com/embed/2jwcCcddhuE?list=PLcoQAaj9Z8f6-Op0CMt4z6Bxixunljpsm" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe id="iframeX" class="vidvid" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 		<div class="mainContent fLeft">
 			<div class="contentRRText">
-				<p class="contentFont redblack roboto bold">Performance Video</p><p id="videoText" class="contentFont white notoK">2014년부터 2019년 3월까지 총 14번의 크고 작은 공연에 주로 베이스 세션 겸 코러스 보컬로 참여했습니다. 노래 부르는 것도 좋아하다보니 메인 보컬로 공연한 적도 있습니다. 대학교 생활의 대부분을 공연을 하며 지냈는데, 많은 공연들 중에도 특별히 인상 깊었던 몇가지 공연 영상들을 첨부했습니다.</p></div>
+				<p id="videoHead" class="headFont white robotoS bold">Performances Gallery</p>
+				<p id="videoText" class="expFont white notoK">2014년부터 2019년 3월까지 총 14번의 크고 작은 공연에 주로 베이스 세션 겸 코러스 보컬로 참여했습니다. 노래 부르는 것도 좋아하다보니 메인 보컬로 공연한 적도 있습니다. 대학교 생활의 대부분을 공연을 하며 지냈는데, 많은 공연들 중에도 특별히 인상 깊었던 몇가지 공연 영상들을 첨부했습니다.</p></div>
 		</div>
 		<div id="cont2bot">
-		<div id="vidList" class="">
-			<div id="vidno1" class="vidBox"><p class="vidFont bodyfont acenter white bold roboto">1</p></div><div id="vidno2" class="vidBox"><p class="vidFont bodyfont acenter white bold roboto">2</p></div><div id="vidno3" class="vidBox"><p class="vidFont bodyfont acenter white bold roboto">3</p></div><div id="vidno4" class="vidBox"><p class="vidFont bodyfont acenter white bold roboto">4</p></div><div id="vidno5" class="vidBox"><p class="vidFont bodyfont acenter white bold roboto">5</p></div>
-		</div>
+			<div id="vidList" class="">
+				<div id="vidno1" class="vidBox"><p class="vidFont aRight orange bold robotoS">Without A Fight(2017)</p></div>
+				<div id="vidno2" class="vidBox"><p class="vidFont aRight orange bold robotoS">Hysteria(2018)</p></div>
+				<div id="vidno3" class="vidBox"><p class="vidFont aRight orange bold robotoS">Don't Stop Me Now(2019)</p></div>
+				<div id="vidno4" class="vidBox"><p class="vidFont aRight orange bold robotoS">If You Ask Me(2019)</p></div>
+				<div id="vidno5" class="vidBox"><p class="vidFont aRight orange bold robotoS">Supermassive Blackhole(2019)</p></div>
+			</div>
+		</div>	
 	</div>
+	<div id="contentBox222" class="fLeft" style="display: none">
+		<img src="MUSE-Something-Human.png"
+		style="position: absolute; left:0; top:0; overflow: hidden; width:100vw;">
+		<div class="mainContent fLeft" style="background: black;">
+			<div class="contentText"></div>
+		</div>
+		<img src="chriss.png" style="position:absolute; left:0; top:0; width:40vw; overflow: hidden;" >
+		<div class="mainContentR fLeft">
+			<div class="contentRText"><p class="headFont orange robotoS">inspired by</p>
+				<p class="bigFont orange bold robotoS">Chris Wolstenholme</p>
+				<p id="typer" class="contentFont white bold notoK"><br>제 롤모델 베이시스트는 영국의 얼터너티브 록 밴드 MUSE의 크리스 볼첸홈입니다. 크리스는 특유의 재미와 중독성을 갖고 있는 베이스 라인으로 유명한 베이시스트입니다.<br>수많은 베이스 입문자들처럼 저 또한 ‘Time Is Running Out’을 시작으로 곡을 연주하기 시작했고, 이후 다른 MUSE의 곡들, ‘Hysteria’, ‘New Born’, 그리고 ‘Knights Of Cydonia’등의 명곡들을 재미있게 연주, 연습해서 실력을 쌓아올린 덕에 저는 지금까지 베이스를 연주할 수 있게 됐다고 생각합니다.</p>
+			</div>
+		</div>
+		<div id="sTheory" class="fRight">
+			<a id="sTheroyLink" style="width: 100%" href="https://raylit.github.io/Fuucckkinggithub/" class="fRight white roboto contentFont" target="_blank">
+			<div id="museAlbum" class="fRight"><img id="museCover" src="cover.jpg"></div>
+			<div style="position: relative; right: 0.8vw; top: 1.2vw;" class="fRight bold aRight"><p>MUSE<br>Simulation Theory<br>8th Album</p><p class="robotoS headFont">Watch Latest MV of MUSE</p></div></a>
+		</div>
 	</div>
 	<div id="contentBox22" class="fLeft" style="display: none">
 		<div id="cont22Back"><img id="bassistBack" src="ssamhap02.jpg"></div>
@@ -323,6 +400,8 @@
 			<div class="contentText"><p class="bigFont white bold notoK">장성훈은<br>카인의 디자이너이자<br>베이스 연주자였습니다.</p><p id="typer" class="contentFont white notoK"><br>고등학교 2학년 때 악기 연주를 하고 싶다는 생각이 들었고,<br>당시 집에 있던 악기라고는 누나가 예전에 구매했던 낡은 베이스가 전부였습니다.<br>창고에 누워있던 이 베이스를 꺼내들게 됨으로 장성훈은 그때부터 베이스를 연주하기 시작했습니다.</p></div>
 		</div>
 	</div>
+
+
 	<div id="contentBox2" style="display: none">
 		<img id="bassistJSH" src="ssamhap01.jpg">
 		<div id="bassHead">
@@ -335,7 +414,45 @@
 		</div>
 	</div>
 	
-	
+	<div id="contentG">
+		
+		<img id="gBackground" src="cainstageMk2.png" class="gBack">
+		<img id="gBackground2" src="jacket002Blur.png" class="noneBack">
+		<img id="gBackground3" src="2018-2-Back.png" class="noneBack">
+		<img id="gBackground4" src="IMG_2161_blur.png" class="noneBack">
+		<img id="gBackground5" src="2017-2-Back.png" class="noneBack">
+		<img id="gBackground6" src="cain7.jpg" class="noneBack">
+		<img id="gBackground7" src="cainstageMk2.png" class="noneBack">
+		<div class="gallery fLeft">
+			<div id="poster190" class="galContents a3PosterD fLeft">
+				<img id="galCont1" class="galImg" src="2019-0-poster.png">
+			</div>
+			<div id="poster191" class="galContents a3PosterDD fLeft">
+				<img id="galCont2" class="galImg" src="2019-1-poster.png">
+			</div>
+			<div id="leaflet19" class="galContents a3PosterDD fLeft">
+				<img id="galCont3" class="galImg" src="2019-2-poster.png">
+			</div>
+			<div id="poster18" class="galContents a3PosterDD fLeft">
+				<img id="galCont4" class="galImg" src="2018-2-poster.png">
+			</div>
+			<div id="leaflet18" class="galContents a3PosterD fLeft">
+				<img id="galCont5" class="galImg" src="2018-2-leaflet-11.png">
+			</div>
+			<div id="backstage18" class="galContents a3PosterD fLeft ">
+				<img id="galCont6" class="galImgHoriz" src="jacket002.jpg">
+			</div>
+			<div id="explainText" class="galExptext fLeft">
+				<p id="expHead" style="padding: 0.2vw 0.2vw 0.2vw 0.2vw;" class="expFont notoK white aRight">
+				</p>
+				<p id="expText" style="padding: 0.2vw 0.2vw 0.2vw 0.2vw;" class="expFont notoK bold white aRight">
+				</p>
+			</div>
+		</div>
+		<div id="galleryHead">
+			<p class="headFont robotoS bold orange">BX Design Gallery</p>
+		</div>
+	</div>
 	
 	<div id="bxBox" class="halfBox"></div>
 	<p id="bxText" class="halfText roboto bold">Band X Design</p>	
@@ -344,22 +461,21 @@
 </body>
 <script type="text/javascript">
 
-	
-	window.onmousewheel = function(e){
-		console.log(e.pageY);	
+	remoteGuide.onmouseover = function(){
+		remoteC.style.top = "0px";
+		remoteC.style.transitionDelay = "0s";
 	}
-	var remoteDown = "off"
-
-	window.onmouseover = function(e){
-		if(remoteDown == "on"){
-			if(e.pageY<120){
-				remoteC.style.top = "0px";
-				remoteC.style.transitionDelay = "0s";
-			}else if(e.pageY>120){
-				remoteC.style.top = "-80px";
-				remoteC.style.transitionDelay = "0.2s";
-			}
-		}
+	menuBox.onmouseover = function(){
+		remoteC.style.top = "0px";
+		remoteC.style.transitionDelay = "0s";
+	}
+	nameBox.onmouseover = function(){
+		remoteC.style.top = "0px";
+		remoteC.style.transitionDelay = "0s";
+	}
+	remoteC.onmouseout = function(){
+		remoteC.style.top = "-80px";
+		remoteC.style.transitionDelay = "0.4s";
 	}
 
 	var gradient = "linear-gradient(rgb(0,45,60), rgb(0,20,30) 5%, rgb(0,20,30) 100%)";
@@ -385,16 +501,24 @@
 	
 	bxBox.onmouseover = function(){
 		bxBox.style.opacity = 0.5;
-		bxText.style.color = "white"; }
+		bxText.style.color = "white";
+		pfBox.style.background = "#ffffff";
+		pfText.style.color = "#ffffff"; }
 	bxBox.onmouseout = function(){
 		bxBox.style.opacity = 1;
-		bxText.style.color = "#ff7f00"; }
+		bxText.style.color = "#ff7f00";
+		pfBox.style.background = "#0025a4";
+		pfText.style.color = "#0025a4";}
 	bxText.onmouseover = function(){
 		bxBox.style.opacity = 0.5;
-		bxText.style.color = "white"; }
+		bxText.style.color = "white";
+		pfBox.style.background = "#ffffff";
+		pfText.style.color = "#ffffff";}
 	bxText.onmouseout = function(){
 		bxBox.style.opacity = 1;
-		bxText.style.color = "#ff7f00"; }
+		bxText.style.color = "#ff7f00";
+		pfBox.style.background = "#0025a4";
+		pfText.style.color = "#0025a4"}
 
 
 	pfBox.onmouseover = function(){
@@ -426,11 +550,7 @@
 		bxText.style.top = "-100%";
 		pfText.style.display = "none";
 
-		bandXDesign.style.background = "white"
-		bandXDesign.style.color = "#2c2c2c";
-		perFormance.style.background = "transparent";
-		perFormance.style.color = "white";
-
+		bandXDesign.style.color = "#ff7f00";
 		bback.style.display = "none";
 		
 	}
@@ -444,6 +564,7 @@
 		contentBox1111.style.display = "block";
 		contentBox11111.style.display = "block";
 
+		remoteGuide.style.zIndex = 4;
 		remoteC.style.top = 0; 
 	}
 	cainLogo.onmouseover = function (){cainLogo.style.opacity = 1;}
@@ -462,26 +583,19 @@
 		bxText.style.top = "-100%";
 		pfText.style.display = "none";
 
-		perFormance.style.color = "#E2FF66";
-
 		contentBox2.style.display = "block";
 		contentBox22.style.display = "block";
 		contentBox22.style.background = "#2c2c2c";
 		contentBox222.style.display = "block";
+		contentBox2222.style.display = "block";
 		bback.style.display = "none";
 		bXBack.style.display = "none";
-
-		bandXDesign.style.background = "transparent";
-		bandXDesign.style.color = "#white";
-		perFormance.style.background = "white";
-		perFormance.style.color = "#2c2c2c";
-		JSH.style.color = "white";
-
 	}
 
 	function pffStart() {
 		contentBox22.style.background = "#2c2c2c";
-		remoteDown = "on"
+		perFormance.style.color = "#0025a4";
+		remoteGuide.style.zIndex = 4;
 		remoteC.style.top = 0;
 	}
 
@@ -499,7 +613,7 @@
 		contentBoxB3.style.display = "none";
 		contentBoxB4.style.display = "none";
 		bandXDesign.style.color = "white";
-		document.body.style.background = "#2c2c2c";
+		document.body.style.background = "#000000";
 	}
 	function pfClose(){
 		contentBox1.style.display = "block";
@@ -514,33 +628,44 @@
 		contentBox2.style.display = "none";
 		contentBox22.style.display = "none";
 		contentBox222.style.display = "none";
-		cont2bot.style.display = "none";
+		contentBox2222.style.display = "none";
 		perFormance.style.color = "white";
 		document.body.style.background = "#fbffe1";
+	}
+
+	function glClose(){
+		contentG.style.top = "100vh"
+		gaLlery.style.color = "white"
 	}
 
 	bandXDesign.onclick = function() {
 		bxStart();
 		pfClose();
+		glClose();
+		bandXDesign.style.color = "#ff7f00";
 		remoteC.style.transitionDelay = "0s";
 	}
 
 	perFormance.onclick = function() {
 		pfStart();
 		bxClose();
+		glClose();
+		perFormance.style.color = "#0025a4"
 		remoteC.style.transitionDelay = "0s";
 	}
-
+	gaLlery.onclick = function() {
+		pfClose();
+		bxClose();
+		gaLlery.style.color = "#E2FF66"
+		contentG.style.top = "0px"
+	}
 	contentBox1.onmousewheel = function() {
 		contentBox1.style.left = "-100%";
 		contentBox11.style.left = "0%";
 		contentBox111.style.left = "100%";
 		contentBox1111.style.left = "200%";
 		contentBox11111.style.left = "300%";
-
-		remoteDown = "on"
-		remoteC.style.top = "-80px";		
-		bandXDesign.style.color = "#FF7F00";
+		remoteC.style.top = "-80px";
 	}
 
 	contentBox11.onmousewheel = function(e) {
@@ -551,11 +676,6 @@
 			contentBox1111.style.left = "100%";
 			contentBox11111.style.left = "200%";
 
-			JSH.style.color = "#ff7f00";
-			bandXDesign.style.color = "white";
-			bandXDesign.style.background = "#ff7f00";
-			perFormance.style.color = "#ff7f00";
-
 		}else if(e.deltaY<0){
 			contentBox1.style.left = "0%";
 			contentBox11.style.left = "100%";
@@ -563,7 +683,6 @@
 			contentBox1111.style.left = "300%";
 			contentBox11111.style.left = "400%";
 			remoteC.style.top = "0px";
-			bandXDesign.style.color = "#2c2c2c";
 		}
 		
 	}
@@ -582,11 +701,6 @@
 			idenText.style.top = "calc(62vh - 1.5vw)";
 			idenText.style.transitionDelay = "0s";
 
-			JSH.style.color = "white";
-			bandXDesign.style.background = "white";
-			bandXDesign.style.color = "#ff7f00";
-			perFormance.style.color = "white";
-
 		}else if(e.deltaY>0){
 			if(toggle == "off"){
 				toggle = "on"
@@ -594,16 +708,12 @@
 				idenText.style.top = "0vh";
 				idenText.style.fontSize = "3em";
 				idenText.style.transitionDelay = "0.2s";
-				bandXDesign.style.color = "#2c2c2c";
-
-
 			}else if(toggle == "on"){
 				contentBox1.style.left = "-300%";
 				contentBox11.style.left = "-200%";
 				contentBox111.style.left = "-100%"
 				contentBox1111.style.left = "0%";
 				contentBox11111.style.left = "100%";
-				bandXDesign.style.color = "white";
 			}
 		}
 		
@@ -624,13 +734,11 @@
 				bubble11.style.background = "#ffffff";
 				bubble11.style.color = "#C10000";
 				bubble22.style.background = "#ffffff";
-				bubble22.style.color = "#1bc92b";
+				bubble22.style.color = "#ff7f00";
 				bubble33.style.background = "#ffffff";
 				bubble33.style.color = "#0013C1";
 				coreBack.style.background = "white";
 				coreVBack.style.opacity = 0;
-				bandXDesign.style.color = "#2c2c2c";
-
 		}else if(e.deltaY>0){
 			if(toggle2 == "off"){
 				toggle2 = "on"
@@ -641,14 +749,12 @@
 				valueText.style.color = "white";
 				bubble11.style.background = "#C10000";
 				bubble11.style.color = "white";
-				bubble22.style.background = "#1bc92b";
+				bubble22.style.background = "#ff7f00";
 				bubble22.style.color = "white";
 				bubble33.style.background = "#0013C1";
 				bubble33.style.color = "white";
 				coreBack.style.background = "black";
 				coreVBack.style.opacity = 0.5;
-				bandXDesign.style.color = "#2c2c2c";
-
 			}else if(toggle2 == "on"){
 				toggle2 = "off"
 				contentBox1.style.left = "-400%";
@@ -656,7 +762,6 @@
 				contentBox111.style.left = "-200%"
 				contentBox1111.style.left = "-100%";
 				contentBox11111.style.left = "0%";
-				bandXDesign.style.color = "white";
 			}
 		}
 	}
@@ -679,8 +784,6 @@
 			logoBoxImg2.style.opacity = 0;
 			waggus.style.opacity = 0;
 			logoBox.style.boxShadow = "none";
-			bandXDesign.style.color = "#1c1c1c";
-
 		}else if(e.deltaY>0){
 			if(toggle3 == "off"){
 				toggle3 = "on"
@@ -688,8 +791,6 @@
 				logoBoxImg2.style.opacity = 1;
 				waggus.style.opacity = 1;
 				logoBox.style.boxShadow = "5px 5px 10px black";
-				bandXDesign.style.color = "#fbffe1";
-
 			}else if(toggle3 == "on"){
 				toggle3 = "off"
 				contentBox11111.style.top = - h - 1 + "px";
@@ -758,10 +859,6 @@
 			}else if(ranK == "rank4"){
 				contentBoxB2.style.top = - h - 1 + "px";
 				contentBoxB3.style.top = "0px";
-				JSH.style.color = "white";
-				bandXDesign.style.color = "#ff7f00";
-				bandXDesign.style.background = "white";
-				perFormance.style.color = "white";
 			}
 		}
 	}
@@ -773,11 +870,6 @@
 			if(ranKK == "rank1"){
 				contentBoxB2.style.top = "0px";
 				contentBoxB3.style.top = "100vh";
-				JSH.style.color = "#FF7F00";
-				bandXDesign.style.background = "#FF7F00";
-				bandXDesign.style.color = "#fbffe1";
-				perFormance.style.color = "#ff7f00";
-
 			}else if(ranKK == "rank2"){
 
 				ranKK = "rank1"
@@ -785,11 +877,6 @@
 				colorHead.style.color = "white";
 				colorBody.style.color = "white";
 				document.getElementById("colorBody").innerHTML = "음악에 대한 열정과 본능을 상징하는 레드 컬러와 대학생의 젊음과 활동성을 상징하는 옐로우 컬러를 섞어 만든 강렬한 오렌지 컬러를 메인으로 사용합니다.";
-				JSH.style.color = "white";
-				bandXDesign.style.background = "white";
-				bandXDesign.style.color = "#FF7F00"
-				perFormance.style.color = "white";
-
 			}
 		}else if(e.deltaY>0){
 			if(ranKK == "rank1"){
@@ -798,15 +885,10 @@
 				colorHead.style.color = "#ff7f00";
 				colorBody.style.color = "#ff7f00";
 				document.getElementById("colorBody").innerHTML = "배경색인 밝은 그린 컬러는 구성원 간의 조화와 편안하고 따뜻한 동아리 방의 분위기를 상징합니다.";
-				JSH.style.color = "#FF7F00";
-				bandXDesign.style.color = "#E2FF66"
-				bandXDesign.style.background = "#ff7f00"
-				perFormance.style.color = "#ff7f00";
 
 			}else if(ranKK == "rank2"){
 				contentBoxB4.style.top = "0px";
 				contentBoxB3.style.top = "-100vh";
-				bandXDesign.style.color = "#2c2c2c"
 			}
 		}
 	}
@@ -818,7 +900,6 @@
 			if(level == "lv1"){
 				contentBoxB4.style.top = "100vh";
 				contentBoxB3.style.top = "0px";
-				bandXDesign.style.color = "#E2FF66"
 			}else if(level == "lv2"){
 				level = "lv1"
 				typeimg.style.opacity = 1;
@@ -850,19 +931,34 @@
 				typeimg3.style.transitionDelay = "0.4s";
 				document.getElementById("typebody").innerHTML = "바디 타입 영문: HK Grotesk<br>바디 타입 한글: 윤고딕 500";
 			}else if(level == "lv3"){
-				contentBoxB4.style.top = "-100vh";
+				contentG.style.top = "0px"
+				bandXDesign.style.color = "white"
+				gaLlery.style.color = "#E2FF66"
 			}
 
 		}
 	}
 	contentBox2.onclick = function(){
-		document.body.style.background = "#2c2c2c";
+		perFormance.style.color = "#0025a4";
+		remoteGuide.style.zIndex = 4;
+		document.body.style.background = "#000000";
 		contentBox2.style.top = "-100vh";
 		bassistJSH.style.opacity = 0;
 		bassName.style.opacity = 0;
 		bassHead.style.opacity = 0;
 		contentBox22.style.opacity = 1;
-		remoteDown = "on"
+		remoteC.style.top = 0;
+	}
+
+	contentBox2.onmousewheel = function(){
+		perFormance.style.color = "#0025a4";
+		remoteGuide.style.zIndex = 4;
+		document.body.style.background = "#000000";
+		contentBox2.style.top = "-100vh";
+		bassistJSH.style.opacity = 0;
+		bassName.style.opacity = 0;
+		bassHead.style.opacity = 0;
+		contentBox22.style.opacity = 1;
 		remoteC.style.top = 0;
 	}
 
@@ -871,29 +967,495 @@
 		contentBox22.style.top = "-100vh";
 		contentBox22.style.opacity = 0;
 		contentBox222.style.opacity = 1;
+		remoteC.style.top = "-80px";
+	}
+	contentBox22.onmousewheel = function(e){
+		if(e.deltaY>0){
+			contentBox22.style.transitionDelay = "0s";
+			contentBox22.style.top = "-100vh";
+			contentBox22.style.opacity = 0;
+			contentBox222.style.opacity = 1;
+			contentBox222.style.transitionDelay = "0.8s";
+			remoteC.style.top = "-80px";
+		}
 	}
 
+	contentBox222.onclick = function(){
+		contentBox222.style.transitionDelay = "0s";
+		contentBox222.style.top = "-100vh";
+		contentBox222.style.opacity = 0;
+		contentBox2222.style.opacity = 1;
+	}
+
+	contentBox222.onmousewheel = function(e){
+		if(e.deltaY<0){
+			contentBox222.style.transitionDelay = "0s";
+			contentBox222.style.opacity = 0;
+			contentBox22.style.top = "0px"
+			contentBox22.style.opacity = 1;
+			contentBox22.style.transitionDelay = "0.8s";
+		}else if(e.deltaY>0){
+			contentBox222.style.transitionDelay = "0s";
+			contentBox222.style.top = "-100vh";
+			contentBox222.style.opacity = 0;
+			contentBox2222.style.opacity = 1;
+			contentBox2222.style.transitionDelay = "0.8s";
+		}
+	}
+
+	contentBox2222.onmousewheel = function(e){
+		if(e.deltaY<0){
+			contentBox2222.style.opacity = 0;
+			contentBox2222.style.transitionDelay = "0s";
+			contentBox222.style.top = "0px";
+			contentBox222.style.transitionDelay = "0.8s";
+			contentBox222.style.opacity = 1;
+		}
+	}
 	vidno1.onclick = function() {
-		iframeX.setAttribute("src", "https://www.youtube.com/embed/vgsbBFb6IEo?list=PLGKeKmjjoPYwpJzDVjGVewf0cEnnNADEE")
-		document.getElementById("videoText").innerHTML = "Don't Look Back In Anger - Oasis<br>2014년 1학기 카인 정기공연.<br>제가 베이스를 잡고 처음 무대에 오른 공연입니다. 많이 어색하고 부족한 시절이었습니다.";
+		vidBack.style.opacity = 0;
+		vidBack01.style.opacity = 0.6;
+		vidBack02.style.opacity = 0;
+		vidBack03.style.opacity = 0;
+		iframeX.setAttribute("src", "https://www.youtube.com/embed/RmnA09w8flA?list=PLGKeKmjjoPYylf2TSiVKqMiguvXEyo9Sy")
+		document.getElementById("videoHead").innerHTML = "Without A Fight - Hoobastank"
+		document.getElementById("videoText").innerHTML = "2017년 2학기 카인 정기공연.<br>군 복무를 마치고 본격적으로 밴드 활동을 시작한 시기의 공연입니다. 꾸준히 연습해서 제법 무르익어 보이는 연주가 가능해졌지만 아직 코러스는 버거워보입니다.";
 	}
 	vidno2.onclick = function() {
-		iframeX.setAttribute("src", "https://www.youtube.com/embed/RmnA09w8flA?list=PLGKeKmjjoPYylf2TSiVKqMiguvXEyo9Sy")
-		document.getElementById("videoText").innerHTML = "Without A Fight - Hoobastank<br>2017년 2학기 카인 정기공연.<br>군 복무를 마치고 본격적으로 밴드 활동을 시작한 시기의 공연입니다. 꾸준히 연습해서 제법 무르익어 보이는 연주가 가능해졌지만 아직 코러스는 버거워보입니다.";
+		vidBack.style.opacity = 0;
+		vidBack01.style.opacity = 0;
+		vidBack02.style.opacity = 0.6;
+		vidBack03.style.opacity = 0;
+		iframeX.setAttribute("src", "https://www.youtube.com/embed/7wFmOsJpWy8?list=PLGKeKmjjoPYxbrB2Cp7VFLoRTNoqLImmF")
+		document.getElementById("videoHead").innerHTML = "Hysteria - MUSE"
+		document.getElementById("videoText").innerHTML = "2018년 1학기 카인 정기공연.<br>제가 지금까지 베이스를 치게 만든 노래, <br>MUSE의 Hysteria를 공연했습니다.<br> 지금 보니 퀄리티는 다소 아쉽지만 그래도 이 곡을 공연했다는 사실만으로도 행복했던 공연이였습니다.";
 	}
 	vidno3.onclick = function() {
-		iframeX.setAttribute("src", "https://www.youtube.com/embed/7wFmOsJpWy8?list=PLGKeKmjjoPYxbrB2Cp7VFLoRTNoqLImmF")
-		document.getElementById("videoText").innerHTML = "Hysteria - MUSE<br>2018년 1학기 카인 정기공연.<br>제가 지금까지 베이스를 치게 만든 노래, MUSE의 Hysteria를 밴드 회장이 된 해에 공연했습니다.<br> 지금 보니 퀄리티는 다소 아쉽지만 그래도 이 곡을 관중들 앞에서 연주했다는 사실만으로도 무언가 벅차올랐던 공연이였습니다.";
+		vidBack.style.opacity = 0;
+		vidBack01.style.opacity = 0;
+		vidBack02.style.opacity = 0;
+		vidBack03.style.opacity = 0.6;
+		iframeX.setAttribute("src", "https://www.youtube.com/embed/2jwcCcddhuE?list=PLcoQAaj9Z8f6-Op0CMt4z6Bxixunljpsm")
+		document.getElementById("videoHead").innerHTML = "Don't Stop Me Now - Queen"
+		document.getElementById("videoText").innerHTML = "2019년 제4회 쌈합 공연.<br>국립한경대학교 3개의 밴드 동아리의 연합 공연, 쌈합 무대에 올랐었습니다. 공연의 임원으로도 참여했던 이 공연은 정말 좋은 기억 뿐입니다.";
 	}
 	vidno4.onclick = function() {
-		iframeX.setAttribute("src", "https://www.youtube.com/embed/2jwcCcddhuE?list=PLcoQAaj9Z8f6-Op0CMt4z6Bxixunljpsm")
-		document.getElementById("videoText").innerHTML = "Don't Stop Me Now - Queen<br>2019년 제4회 쌈합 공연.<br>국립한경대학교 3개의 밴드 동아리의 연합 공연, 쌈합 무대에 올랐었습니다. 공연의 임원으로도 참여했던 이 공연은 정말 좋은 기억 뿐입니다.";
+		iframeX.setAttribute("src", "https://www.youtube.com/embed/R-qbKKXwqwE")
+		document.getElementById("videoHead").innerHTML = "If You Ask Me Now - H a lot"
+		document.getElementById("videoText").innerHTML = "2019년 신입생 OT 공연.<br>최근에 참여한 2019년 신입생 OT 공연입니다. 근래에 완성도가 높아진 코러스 보컬의 모습을 잘 보여주는 무대라고 생각합니다.";
 	}
 	vidno5.onclick = function() {
-		iframeX.setAttribute("src", "https://www.youtube.com/embed/R-qbKKXwqwE")
-		document.getElementById("videoText").innerHTML = "If You Ask Me Now - H a lot<br>2019년 신입생 OT 공연.<br>최근에 참여한 2019년 신입생 OT 공연입니다. 근래에 완성도가 높아진 코러스 보컬의 모습을 잘 보여주는 무대라고 생각합니다.";
+		iframeX.setAttribute("src", "https://www.youtube.com/embed/oPCsUJ0QVFA")
+		document.getElementById("videoHead").innerHTML = "Supermassive Blackhole - MUSE"
+		document.getElementById("videoText").innerHTML = "2019년 한경대 축제<br>Coming soon";
 	}
 
+	var expRank = "off"
 
+	leaflet18.onmouseover = function() {
+		if(expRank == "off"){
+			document.getElementById("expHead").innerHTML = "카인 Youtube<br>"
+			galCont5.style.opacity = 1;
+			galleryHead.style.opacity = 0;
+			gBackground.style.opacity = 0.2;
+			gBackground2.style.opacity = 0;
+			gBackground3.style.opacity = 0;
+			gBackground4.style.opacity = 0;
+			gBackground5.style.opacity = 0;
+			gBackground6.style.opacity = 0;
+		}
+	}
+	leaflet18.onmouseout = function() {
+		if(expRank == "off"){
+			document.getElementById("expHead").innerHTML = " "
+			galCont5.style.opacity = 0;
+			galleryHead.style.opacity = 1;
+			gBackground.style.opacity = 0.8;
+			gBackground2.style.opacity = 0;
+			gBackground3.style.opacity = 0;
+			gBackground4.style.opacity = 0;
+			gBackground5.style.opacity = 0;
+			gBackground6.style.opacity = 0;
+		}
+	}
+
+	leaflet19.onmouseover = function() {
+		if(expRank == "off"){
+			document.getElementById("expHead").innerHTML = "밴樂드<br>[2019년 2학기 신입생 모집 포스터]"
+			galCont3.style.opacity = 1;
+			galleryHead.style.opacity = 0;
+			gBackground.style.opacity = 0.2;
+			gBackground2.style.opacity = 0;
+			gBackground3.style.opacity = 0;
+			gBackground4.style.opacity = 0;
+			gBackground5.style.opacity = 0;
+			gBackground6.style.opacity = 0;
+		}
+	}
+	leaflet19.onmouseout = function() {
+		if(expRank == "off"){
+			document.getElementById("expHead").innerHTML = " "
+			galCont3.style.opacity = 0;
+			galleryHead.style.opacity = 1;
+			gBackground.style.opacity = 0.8;
+			gBackground2.style.opacity = 0;
+			gBackground3.style.opacity = 0;
+			gBackground4.style.opacity = 0;
+			gBackground5.style.opacity = 0;
+			gBackground6.style.opacity = 0;
+		}
+	}
+
+	leaflet19.onclick = function() {
+		if(expRank == "off"){
+			expRank = "on"
+			hiding();
+			document.getElementById("expHead").innerHTML = "밴樂드<br>[2019년 2학기 신입생 모집 포스터]"
+			document.getElementById("expText").innerHTML = "카인이 교내 유일 록 밴드 동아리라는 것을 강하게 어필하고 싶다는 회원들의 바람을 담아 제작한 신입생 모집 포스터입니다."
+			leaflet19.style.zIndex = "2";
+			leaflet19.style.top = "7.5vh";
+			leaflet19.style.left = "13vw"
+			leaflet19.style.width = "25.2vw";
+			leaflet19.style.height = "35.6vw";
+			galleryHead.style.opacity = 0;
+			gBackground.style.opacity = 0;
+			gBackground2.style.opacity = 0;
+			gBackground3.style.opacity = 0;
+			gBackground4.style.opacity = 0;
+			gBackground5.style.opacity = 0;
+			gBackground6.style.opacity = 0.8;
+			leaflet19.style.opacity = 1;
+			explainText.style.opacity = 1;
+		}else if(expRank == "on"){
+			expRank = "off"
+			nHiding();
+			document.getElementById("expHead").innerHTML = "<br>"
+			document.getElementById("expText").innerHTML = "<br>"
+			leaflet19.style.zIndex = "1"; 
+			leaflet19.style.top = "7.5vh";
+			leaflet19.style.left = "47.3vw"
+			leaflet19.style.width = "16.8vw";
+			leaflet19.style.height = "23.6vw";
+			galleryHead.style.opacity = 1;
+			gBackground.style.opacity = 0.8;
+			gBackground2.style.opacity = 0;
+			gBackground3.style.opacity = 0;
+			gBackground4.style.opacity = 0;
+			gBackground5.style.opacity = 0;
+			gBackground6.style.opacity = 0;
+		}
+	}
+	gBackground7.onclick = function() {
+			expRank = "off"
+			nHiding();
+			document.getElementById("expHead").innerHTML = "<br>"
+			document.getElementById("expText").innerHTML = "<br>"
+			galleryHead.style.opacity = 1;
+			galCont1.style.opacity = 0;
+			galCont2.style.opacity = 0;
+			galCont3.style.opacity = 0;
+			galCont4.style.opacity = 0;
+			galCont5.style.opacity = 0;
+			galCont6.style.opacity = 0;
+			poster18.style.width = "16.8vw";
+			poster18.style.height = "23.6vw";
+			leaflet19.style.top = "7.5vh";
+			leaflet19.style.left = "47.3vw"
+			leaflet19.style.width = "16.8vw";
+			leaflet19.style.height = "23.6vw";
+			poster190.style.width = "16.8vw"
+			poster190.style.height = "11.8vw"
+			poster190.style.top = "calc(7.5vh + 24vw)"
+			poster190.style.left = "13vw"
+			poster191.style.top = "calc(7.5vh + 12.2vw)";
+			poster191.style.left = "30.2vw"
+			poster191.style.width = "16.8vw";
+			poster191.style.height = "23.6vw";
+			backstage18.style.width = "16.8vw"
+			backstage18.style.height = "11.8vw"
+			backstage18.style.left = "30.2vw"
+			gBackground.style.opacity = 0.8;
+			gBackground2.style.opacity = 0;
+			gBackground3.style.opacity = 0;
+			gBackground4.style.opacity = 0;
+			gBackground5.style.opacity = 0;
+			gBackground6.style.opacity = 0;
+	}
+	poster18.onmouseover = function() {
+		if(expRank == "off"){
+			document.getElementById("expHead").innerHTML = "카인이 키워낸 나무<br>[2018년 2학기 정기공연 포스터]"
+			galCont4.style.opacity = 1;
+			galleryHead.style.opacity = 0;
+			gBackground.style.opacity = 0.2;
+			gBackground2.style.opacity = 0;
+			gBackground3.style.opacity = 0;
+			gBackground4.style.opacity = 0;
+			gBackground5.style.opacity = 0;
+			gBackground6.style.opacity = 0;
+		}
+	}
+	poster18.onmouseout = function() {
+		if(expRank == "off"){
+			document.getElementById("expHead").innerHTML = " "
+			galCont4.style.opacity = 0;
+			galleryHead.style.opacity = 1;
+			gBackground.style.opacity = 0.8;
+			gBackground2.style.opacity = 0;
+			gBackground3.style.opacity = 0;
+			gBackground4.style.opacity = 0;
+			gBackground5.style.opacity = 0;
+			gBackground6.style.opacity = 0;
+		}
+	}
+	poster18.onclick = function() {
+		if(expRank == "off"){
+			expRank = "on"
+			hiding();
+			document.getElementById("expHead").innerHTML = "카인이 키워낸 나무<br>[2018년 2학기 정기공연 포스터]"
+			document.getElementById("expText").innerHTML = "2018년 1학기 정기공연 포스터와 이어지는 내용의 포스터로 1학기에 피어난 무대 위 작은 새싹이 1년의 성장 기간을 거쳐 39번째 카인의 나무가 되었다는 메세지를 담고 있습니다."
+			poster18.style.zIndex = "2";
+			poster18.style.width = "25.2vw";
+			poster18.style.height = "35.6vw";
+			galleryHead.style.opacity = 0;
+			gBackground.style.opacity = 0;
+			gBackground2.style.opacity = 0;
+			gBackground3.style.opacity = 0.8;
+			gBackground4.style.opacity = 0;
+			gBackground5.style.opacity = 0;
+			gBackground6.style.opacity = 0;
+			poster18.style.opacity = 1;
+			explainText.style.opacity = 1;
+		}else if(expRank == "on"){
+			expRank = "off"
+			nHiding();
+			document.getElementById("expHead").innerHTML = " "
+			document.getElementById("expText").innerHTML = " "
+			poster18.style.zIndex = "1";
+			poster18.style.width = "16.8vw";
+			poster18.style.height = "23.6vw";
+			galleryHead.style.opacity = 1;
+			gBackground.style.opacity = 0.8;
+			gBackground2.style.opacity = 0;
+			gBackground3.style.opacity = 0;
+			gBackground4.style.opacity = 0;
+			gBackground5.style.opacity = 0;
+			gBackground6.style.opacity = 0;
+		}
+	}
+	poster190.onmouseover = function() {
+		if(expRank == "off"){
+			document.getElementById("expHead").innerHTML = "당신의 색으로 칠해주세요<br>[2019년 1학기 신입생 모집 포스터]"
+			galCont1.style.opacity = 1;
+			galleryHead.style.opacity = 0;
+			gBackground.style.opacity = 0.2;
+			gBackground2.style.opacity = 0;
+			gBackground3.style.opacity = 0;
+			gBackground4.style.opacity = 0;
+			gBackground5.style.opacity = 0;
+			gBackground6.style.opacity = 0;
+		}
+	}
+	poster190.onmouseout = function() {
+		if(expRank == "off"){
+			document.getElementById("expHead").innerHTML = " "
+			galCont1.style.opacity = 0;
+			galleryHead.style.opacity = 1;
+			gBackground.style.opacity = 0.8;
+			gBackground2.style.opacity = 0;
+			gBackground3.style.opacity = 0;
+			gBackground4.style.opacity = 0;
+			gBackground5.style.opacity = 0;
+			gBackground6.style.opacity = 0;
+		}
+	}
+	poster190.onclick = function() {
+		if(expRank == "off"){
+			expRank = "on"
+			document.getElementById("expHead").innerHTML = "당신의 색으로 칠해주세요<br>[2019년 1학기 신입생 모집 포스터]"
+			document.getElementById("expText").innerHTML = "매년 새로운 색깔을 띄는 카인에 새로운 색을 채워줄 사람을 모집하는 의미로 제작된 포스터입니다."
+			poster190.style.width = "50.7vw"
+			poster190.style.height = "35.8vw"
+			poster190.style.top = "7.5vh"
+			poster190.style.left = "13vw"
+			poster190.style.zIndex = "2"
+			galleryHead.style.opacity = 0;
+			gBackground.style.opacity = 0;
+			gBackground2.style.opacity = 0;
+			gBackground3.style.opacity = 0;
+			gBackground4.style.opacity = 0;
+			gBackground5.style.opacity = 0.8;
+			gBackground6.style.opacity = 0;
+			poster190.style.opacity = 1;
+			explainText.style.opacity = 1;
+		}else if(expRank == "on"){
+			expRank = "off"
+			document.getElementById("expHead").innerHTML = " " 
+			document.getElementById("expText").innerHTML = " " 
+			poster190.style.width = "16.8vw"
+			poster190.style.height = "11.8vw"
+			poster190.style.top = "calc(7.5vh + 24vw)"
+			poster190.style.left = "13vw"
+			poster190.style.zIndex = "1"
+			galleryHead.style.opacity = 1;
+			gBackground.style.opacity = 0.8;
+			gBackground2.style.opacity = 0;
+			gBackground3.style.opacity = 0;
+			gBackground4.style.opacity = 0;
+			gBackground5.style.opacity = 0;
+			gBackground6.style.opacity = 0;
+		}
+	}
+	poster191.onmouseover = function() {
+		if(expRank == "off"){
+			document.getElementById("expHead").innerHTML = "우리의 그림 일기<br>[2019년 1학기 정기공연 포스터]"
+			galCont2.style.opacity = 1;
+			galleryHead.style.opacity = 0;
+			gBackground.style.opacity = 0.2;
+			gBackground2.style.opacity = 0;
+			gBackground3.style.opacity = 0;
+			gBackground4.style.opacity = 0;
+			gBackground5.style.opacity = 0;
+			gBackground6.style.opacity = 0;
+		}
+	}
+	poster191.onmouseout = function() {
+		if(expRank == "off"){
+			document.getElementById("expHead").innerHTML = " "
+			galCont2.style.opacity = 0;
+			galleryHead.style.opacity = 1;
+			gBackground.style.opacity = 0.8;
+			gBackground2.style.opacity = 0;
+			gBackground3.style.opacity = 0;
+			gBackground4.style.opacity = 0;
+			gBackground5.style.opacity = 0;
+			gBackground6.style.opacity = 0;
+		}
+	}
+	poster191.onclick = function() {
+		if(expRank == "off"){
+			expRank = "on"
+			hiding();
+			document.getElementById("expHead").innerHTML = "우리의 그림 일기<br>[2019년 1학기 정기공연 포스터]"
+			document.getElementById("expText").innerHTML = "회원들끼리 다함께 쓰는 그림 일기장은 카인의 특색있는 동아리 활동 문화 중 하나입니다.<br>그 문화를 바탕으로 카인의 다정하고 따뜻한 모습을 보여주는 포스터를 제작했습니다. "
+			poster191.style.zIndex = "2";
+			poster191.style.top = "7.5vh";
+			poster191.style.left = "13vw"
+			poster191.style.width = "25.2vw";
+			poster191.style.height = "35.6vw";
+			galleryHead.style.opacity = 0;
+			gBackground.style.opacity = 0;
+			gBackground2.style.opacity = 0;
+			gBackground3.style.opacity = 0;
+			gBackground4.style.opacity = 0.8;
+			gBackground5.style.opacity = 0;
+			gBackground6.style.opacity = 0;
+			poster191.style.opacity = 1;
+			explainText.style.opacity = 1;
+		}else if(expRank == "on"){
+			expRank = "off"
+			document.getElementById("expHead").innerHTML = " "
+			document.getElementById("expText").innerHTML = " "
+			poster191.style.zIndex = "1";
+			poster191.style.top = "calc(7.5vh + 12.2vw)";
+			poster191.style.left = "30.2vw"
+			poster191.style.width = "16.8vw";
+			poster191.style.height = "23.6vw";
+			galleryHead.style.opacity = 1;
+			gBackground.style.opacity = 0.8;
+			gBackground2.style.opacity = 0;
+			gBackground3.style.opacity = 0;
+			gBackground4.style.opacity = 0;
+			gBackground5.style.opacity = 0;
+			gBackground6.style.opacity = 0;
+			nHiding();
+		}
+	}
+	backstage18.onmouseover = function() {
+		if(expRank == "off"){
+			document.getElementById("expHead").innerHTML = "2018년 동아리 단체 재킷"
+			galCont6.style.opacity = 1;
+			galleryHead.style.opacity = 0;
+			gBackground.style.opacity = 0.2;
+			gBackground2.style.opacity = 0;
+			gBackground3.style.opacity = 0;
+			gBackground4.style.opacity = 0;
+			gBackground5.style.opacity = 0;
+			gBackground6.style.opacity = 0;
+		}
+	}
+	backstage18.onmouseout = function() {
+		if(expRank == "off"){
+			document.getElementById("expHead").innerHTML = " "
+			galCont6.style.opacity = 0;
+			galleryHead.style.opacity = 1;
+			gBackground.style.opacity = 0.8;
+			gBackground2.style.opacity = 0;
+			gBackground3.style.opacity = 0;
+			gBackground4.style.opacity = 0;
+			gBackground5.style.opacity = 0;
+			gBackground6.style.opacity = 0;
+		}
+	}
+	backstage18.onclick = function() {
+		if(expRank == "off"){
+			expRank = "on"
+			hiding();
+			document.getElementById("expHead").innerHTML = "2018년 동아리 단체 재킷";
+			document.getElementById("expText").innerHTML = "카인의 아이덴티티가 처음 적용된 사례입니다.<br>코치 자켓 등판에 카인의 슬로건 <br>‘Rock'n'Roll’이 적혀있습니다. <br> 웨어러블함을 위해 카인의 오렌지색은<br>사용되지 않았습니다.";
+			backstage18.style.zIndex = 2;
+			backstage18.style.width = "54vw"
+			backstage18.style.height = "35.8vw"
+			backstage18.style.left = "13vw"
+			gBackground.style.opacity = 0;
+			gBackground2.style.opacity = 0.8;
+			gBackground3.style.opacity = 0;
+			gBackground4.style.opacity = 0;
+			gBackground5.style.opacity = 0;
+			gBackground6.style.opacity = 0;
+			backstage18.style.opacity = 1;
+			explainText.style.opacity = 1;
+		}else if(expRank == "on"){
+			expRank = "off"
+			nHiding();
+			document.getElementById("expText").innerHTML = " ";
+			backstage18.style.zIndex = 1;
+			backstage18.style.width = "16.8vw"
+			backstage18.style.height = "11.8vw"
+			backstage18.style.left = "30.2vw"
+			gBackground.style.opacity = 0.8;
+			gBackground2.style.opacity = 0;
+			gBackground3.style.opacity = 0;
+			gBackground4.style.opacity = 0;
+			gBackground5.style.opacity = 0;
+			gBackground6.style.opacity = 0;
+		}
+	}
+
+	var gal = document.getElementsByClassName("galContents");
+
+	function hiding() {
+		for(i=0;i<gal.length;i++){
+			gal[i].style.zIndex = -1;
+		}
+	}
+	function nHiding() {
+		for(i=0;i<gal.length;i++){
+			gal[i].style.zIndex = 1;
+		}
+	}
+
+	console.log(gal.length);
+	toFirst.onclick = function(){
+		contentBox1.style.left = "0px";
+		contentBox11.style.left = "100%";
+		contentBox111.style.left = "100%";
+		contentBox1111.style.left = "100%";
+		contentBox11111.style.left = "100%";
+		contentBox11111.style.top = "0px";
+		contentBoxB1.style.top = "100vh";
+		contentBoxB2.style.top = "100vh";
+		contentBoxB3.style.top = "100vh";
+		contentBoxB4.style.top = "100vh";
+	}
 </script>
 </html>
