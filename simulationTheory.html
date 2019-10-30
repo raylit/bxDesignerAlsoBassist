@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Cabin+Condensed|Roboto:500|Squada+One" rel="stylesheet">
+	<title>MUSE: Simulation Theory</title>
+	<style>
+
+		a:link, a:active, a:visited, a:hover{ text-decoration:  none; }
+		a:link, a:active, { color:none; }
+		a:visited { color:blue; }
+		body { background: rgb(0,20,30); }
+		body { overflow: hidden; }
+		
+		#mainCo { transition: 0.8s;
+			width:100vw; height: 100vh; overflow: hidden;
+			position: absolute; top:0; left:0;
+		}
+
+		#mainCover { width:100%; position: absolute; top:0; left:0; opacity:1;}
+		#coverCover { width:100%; top:0; left:0; transition: 0.8s;}
+
+		#backGro { opacity:0; transition: 1s; transition-delay:4s;
+			position: absolute; top:0; left:0; width:100%; height: 1080px; overflow: hidden;  }
+		.backIMG { width:100%; transition: 1s; }
+
+		.center { opacity:0; position: absolute; width:1px; height: 1080px; background: rgb(50,230,255);
+			left: calc(50% - 1px); transition: 1s; transition-delay: 2s;}
+		#nocenterLine { opacity:0; position: absolute; width:1px; height: 1080px; background: rgb(50,230,255);
+			right: calc(50% + 1px); transition: 1s; transition-delay: 3s}
+
+		#videoBox { opacity:0; transition: 1s;
+			background: rgb(50,230,255); 
+			position:absolute; width:1290px; height:730px; 
+			left: calc(50% - 640px); top: calc(50% - 380px);}
+		#vidvid { padding-top:5px; padding-left:5px; width:1280px; height:720px;  transition: 1s;}
+
+		#album {
+			opacity:0; 
+			background: rgb(0,20,30); height: 36vh; width: calc(50% - 1px); overflow: hidden; color:white;
+			position:relative; left: 0px; transition: 1s; transition-delay:1.5s;}
+
+		#coVer { width:250px; margin-top:25px; margin-left:25px; }
+
+		#naMe { position:relative; top: 25px; left: 25px;}
+
+		#naMee { position:relative; top: 10px; left: 25px; }
+
+		#setList {
+			opacity:0; 
+			background-image: linear-gradient(rgb(0,45,60), rgb(0,20,30) 5%, rgb(0,20,30) 100%);
+			width: calc(50% - 1px); height: 65vh; position: relative; left:0px;
+			transition: 1s; transition-delay:2s;
+		}
+
+		#trackList { margin:0; padding-left:30px; padding-top:20px; width:150px; display:block; }
+		#trackList li:hover { cursor: default; }
+		#TDSide div:hover { cursor: pointer; color: rgb(255,100,180); }
+		#PRSure div:hover { cursor: pointer; color: rgb(255,100,180); }
+		#STHumn	div:hover { cursor: pointer; color: rgb(255,100,180); }
+		#THCgio div:hover { cursor: pointer; color: rgb(255,100,180); }
+		#DIGdwn div:hover { cursor: pointer; color: rgb(255,100,180); }
+
+		#actionBox { 
+			position: relative; left: 80px;
+			top:30px; width:450px; height:250px; overflow:hidden;
+			display: none;
+		}
+		#comeOn {
+			cursor: default;
+			display:block;
+			color: white;
+			position: absolute; bottom: 10vh; right: 30px;
+		}
+		#comeOn h1:hover{ background: blue; }
+
+		#lyrics {
+			background: rgb(0,20,30); position:absolute; top:0px; right:50%; width:50%; height:1080px;
+			transition: 1s; transition-delay:3s; opacity:0;}
+
+		#typer { opacity: 0; }
+		#typer2 { opacity: 0; }
+		#typer3 { opacity: 0; }
+		#typer4 { opacity: 0; }
+		#typer5 { opacity: 0; }
+
+		#footer { 
+			opacity: 0;
+			transition: 1s;
+			transition-delay: 1s;
+			background: rgb(50,230,255);
+			background-image: linear-gradient(rgb(50,230,255), rgb(0,20,30) 100%);
+			color: rgb(200,240,255);
+			width: 100%; height:30px;
+			position: fixed; bottom:0px;
+			text-align: center;
+			}
+
+		#header {
+			background: rgb(255,80,180); color: white; text-align:center; font-size:2vw; font-weight: bold;
+			width:100%; height:60px; line-height:60px;
+			position: absolute; top:-60px; left:0;
+			transition: 1s; transition-delay: 20s;
+
+		}
+		#header a{ display:block; }
+		#header a:link, a:active, a:visited { color:white; }
+		#header a:hover { color: yellow; }
+
+		.fLeft { float:left; }
+
+		.para{ font-size: 1vw; line-height:1.8em; font-family: 'Roboto', sans-serif; }
+		.para2{ font-size: 1vw; line-height:1.8em; font-family: 'Squada One', cursive; }
+		.para3{ font-size: 0.8vw; line-height:10px; font-family: 'Roboto', sans-serif; }
+		.para4{ font-size: 1vw; line-height:1.8em; }
+
+		.track { list-style: none; height:2em; color: rgb(200,240,255); }
+
+		.nowOpen { color: blue; }
+
+		.gifImage { width:450px; }
+
+		.typeBack {
+			background: black; opacity: 0.8;
+			position: relative;
+			top: 50px; left:50px;
+		 	width: calc( 100% - 100px ); height: 980px;}
+
+		.typingSpace {
+			overflow: auto;
+			font-size: 2em;
+			font-weight: bold;
+			position:absolute;
+			color: white;
+			top: 50px; left:50px;
+		 	width: calc( 100% - 100px ); height: 980px;
+		}
+	</style>
+</head>
+
+<body>
+	<audio id="buttonSound" src="switch001.mp3"></audio>
+	<div id="backGro">
+	<img id="backGroun" class="backIMG" src="somethinghum.jpg">
+	</div>
+
+	<div id="videoBox">
+		<video id="vidvid" type="video/mp4" preload="auto" src="02_vid_darkside.mp4"></video>
+	</div>
+
+	<div id="lyrics">
+		<div class="typeBack">
+		</div>
+		<div id="typer" class="typingSpace para4">
+		</div>
+		<div id="typer2" class="typingSpace para4">
+		</div>
+		<div id="typer3" class="typingSpace para4">
+		</div>
+		<div id="typer4" class="typingSpace para4">
+		</div>
+		<div id="typer5" class="typingSpace para4">
+		</div>
+	</div>
+
+	<div id="centerLine" class="center"></div>
+	<div id="centerLine2" class="center"></div>
+	<div id="nocenterLine" class="nocenter"></div>
+
+	<div id="album" class="para">
+		<img id="coVer" class="fLeft" src="cover.jpg">
+		<div id="naMe" class="fLeft">
+			<p1>
+			MUSE<br>
+			Simulation Theory<br>
+			8th Album<br>
+			<br>
+			<br>
+			Released<br>
+			Recorded<br>
+			Studio	
+		</p1>
+
+		</div>
+		<div id="naMee" class="fleft">
+			<p>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+			9 November 2018<br>
+			January 2017 – August 2018<br>
+			AIR Studios(London, England)
+		</p>
+		</div>
+	</div>
+	<nav id="setList" class="para2">
+		<ul id="trackList" class="fLeft">
+			<li class="track">
+				1 Algorithm<br></li>
+			<li class="track nowOpen" id="TDSide"><div>
+				2 The Dark Side<br><div></li>
+			<li class="track nowOpen" id="PRSure"><div>
+				3 Pressure<br></div></li>
+			<li class="track">
+				4 Propaganda<br></li>
+			<li class="track">
+				5 Break It To Me<br></li>
+			<li class="track nowOpen" id="STHumn"><div>
+				6 Something Human<br></div></li>
+			<li class="track nowOpen" id="THCgio"><div>
+				7 Thought Contagion<br></div></li>
+			<li class="track">
+				8 Get Up and Fight<br></li>
+			<li class="track">
+				9 Blockades<br></li>
+			<li class="track nowOpen" id="DIGdwn"><div>
+				10 Dig Down<br></div></li>
+			<li class="track">
+				11 The Void<br></li>
+		</ul>
+		<div id="actionBox">
+			<img id="gifZone" src="pressure2.gif" class="gifImage fLeft">
+		</div>
+
+		<div id="comeOn">
+			<h1>
+				◀ You can listen BLUE tracks!
+			</h1>
+		</div>
+	</nav>
+	
+
+	<div id="mainCo">
+		<img id="coverCover" src="bigCovercover.png">
+	</div>
+
+	<footer id="footer" class="para3">
+		<p>
+			© Warner Music UK Limited 2018 · Privacy Policy · Terms of Use · Cookie Delicious · Site by SuperRockStar
+		</p>
+	</footer>
+
+	<header id="header">
+		<a id="address" href="https://youtu.be/QQ_3S-IQm38">
+		Click to watch Full Version!</a>
+	</header>
+
+	<script type="text/javascript">
+
+			var i=0,text;
+			var text = "I have lived in darkness For all my life, I've been pursued You'd be afraid if you could feel my pain And if you could see the things I am able to see Break me out, break me out Let me flee Break me out, break me out Set me free I hail from the dark side For all my life, I've been besieged You'd be scared living with my despair And if you could feel the things, I am able to feel Break me out, break me out Let me flee Break me out, break me out Set me free Break me out, break me out Let me flee Break me out, break me out Set me free Save me from the dark side Break me out, break me out Set me free";
+			
+
+			function typing() {
+				if(i<text.length){
+					document.getElementById("typer").innerHTML += text.charAt(i);
+					i++;
+					setTimeout(typing,20);
+				}
+			}
+
+			var k=0,text2;
+			var text2 = "I'm trapped and my back is up against the wall I see no solution or exit out I'm grinding it out, no one can see The pressure is growing exponentially I'm trying to keep up to speed with you Your lane changing is oscillating me I'm hitting the ground and I'm sprinting I'm falling behind now I'm tuning out Pressure building Pressure building Pressure building Don't push me Don't push me Let me get off the ground To you I'm no longer bound Don't stop me, don't choke me I need you out of my head You've got me close to the edge I'm feeling the pressure I can't break out No one can hear me scream and shout Get out of my face, out of my mind I see your corruption I'm not blind I'll carry the burden and take the strain And when I am done I will make you pay Pressure building Pressure building Pressure building Don't push me Don't push me Let me get off the ground To you I'm no longer bound Don't curb me Don't thwart me I need you out of my head You've got me close to the edge Pressure building Pressure building Don't push me Don't push me Let me get off the ground To you I'm no longer bound Don't stop me Don't block me I need you out of my head You've got me close to the edge Pressure building Pressure building";
+			
+
+			function typing2() {
+				if(k<text2.length){
+					document.getElementById("typer2").innerHTML += text2.charAt(k);
+					k++;
+					setTimeout(typing2,20);
+				}
+			}
+
+			var l=0,text3;
+			var text3 = "My circuits have blown I know it's self-imposed And all I have shared, and all I have loved Is all I'll ever own But something has changed I feel so alive My life just blew up, I'd give it all up I'll depressurize Oh, oh, oh, ten thousand miles left on the road Oh, oh, oh, five hundred hours 'til I am home I need something human, human Human, human Let's face all our fears Come out of the shade Let's burn all the money, absolve all the lies And wake up unscathed The big picture's gone Replaced with visions of you Now life can begin, I've cleansed all my sins I'm about to break through Oh, oh, oh, five thousand miles left on the road Oh, oh, oh, two hundred hours 'til I am home I need something human, human Human, human And I need the touch And something human, human Oh, oh, oh, less than a mile left on the road Oh, oh, oh, I will be crawling though your door I need something human, human Human, human And I need your love And something human, human";
+			
+
+			function typing3() {
+				if(l<text3.length){
+					document.getElementById("typer3").innerHTML += text3.charAt(l);
+					l++;
+					setTimeout(typing3,20);
+				}
+			}
+
+
+			var p=0,text4;
+			var text4 = "Strung out falling from the big time Welcome to the infinite black skies Brain clans fractured identity Fragments and scattered debris Thought contagion Thought contagion Fall down long winds are counted out Prop me up before I black out Withdraw before you're out of time A clean slate and buried war crimes You've been bitten by a true believer You've been bitten by someone who's hungrier than you You've been bitten by a true believer You've been bitten by someone's false beliefs Thought contagion Thought contagion They'll never do what you want them to Give it up and watch them break through It's too late for a revolution Brace for the final solution Thought contagion Thought contagion You've been bit/by a true believer You've been bit by someone who's hungrier then you You've been bit by a true believer/You've been bitten by someone's false beliefs Thought contagion Thought contagion Strung out falling from the big time Welcome to the infinite black skies It's too late for a revolution Brace for the final solution";
+			
+
+			function typing4() {
+				if(p<text4.length){
+					document.getElementById("typer4").innerHTML += text4.charAt(p);
+					p++;
+					setTimeout(typing4,20);
+				}
+			}
+
+			var q=0,text5;
+			var text5 = "When hope and love has been lost And you fall to the ground You must find a way When the darkness descends And you're told it's the end You must find a way When God decides to look the other way And a clown takes the throne We must find a way Face the firing squad Against all the odds You will find a way Dig down Dig down Dig down And find faith When you're close to the edge With a gun to your head You must find a way When friends are thin on the ground And they try to divide us We must find a way We have entered the fray And we will not obey We must find a way Yeah Dig down Dig down Dig down And find faith When they've left you for dead (dig down) And you can only see red (dig down) You must find a way Dig down Dig down Dig down Find faith We won't let them divide (dig down) We will never abide (dig down) We will find a way Dig down Dig down Dig down Faith Dig down Dig down Faith";
+			
+
+			function typing5() {
+				if(q<text5.length){
+					document.getElementById("typer5").innerHTML += text5.charAt(q);
+					q++;
+					setTimeout(typing5,20);
+				}
+			}
+
+			function vidPlayPause() {
+				var vidvid = document.getElementById("vidvid");
+				if (vidvid.paused) { vidvid.play();
+				}else { vidvid.pause(); }
+
+			}
+
+			function opendoor(){
+					album.style.transitionDelay = 0 + "s";
+					setList.style.transitionDelay = 0 + "s";
+					centerLine.style.transitionDelay = 0 + "s";
+					centerLine2.style.transitionDelay = 0 + "s";
+					album.style.left = -47 + "%";
+					setList.style.left = -47 + "%";
+					centerLine.style.left = 3 + "%";
+					centerLine2.style.left = "calc(97% - 1px)";
+					lyrics.style.right = -47 + "%";
+					backGroun.style.opacity= 0.2;
+					header.style.transitionDelay = 4 + "s";
+					header.style.top = 0  + "px";
+
+					videoBox.style.opacity = 1;
+			}
+
+			function closedoor(){
+					album.style.transitionDelay = 0 + "s";
+					setList.style.transitionDelay = 0 + "s";
+					album.style.left = 0 + "%";
+					setList.style.left = 0 + "%";
+					centerLine.style.left = "calc(50% - 1px)";
+					centerLine2.style.left = "calc(50% - 1px)";
+					lyrics.style.right = 0 + "%";
+					backGroun.style.opacity= 1;
+					header.style.transitionDelay = 0 + "s";
+					header.style.transition = 0.5 + "s";
+					header.style.top = -60 + "px";
+
+					videoBox.style.opacity = 0;
+			}
+
+			TDSide.onmouseover = function(){
+					actionBox.style.display = "block";
+					gifZone.setAttribute("src", "darkside.gif");
+					backGroun.setAttribute("src", "somethinghum.jpg")
+					lyrics.style.transitionDelay = 0 + "s";
+					lyrics.style.opacity = 0.6;
+					typer.style.opacity = 1;
+					typing();
+			}
+			TDSide.onmouseout = function(){
+					actionBox.style.display = "none";
+					lyrics.style.transitionDelay = 0 + "s";
+					lyrics.style.opacity = 1;
+					typer.style.opacity = 0;
+			}
+
+
+			PRSure.onmouseover = function(){
+					actionBox.style.display = "block";
+					gifZone.setAttribute("src", "pressure.gif");
+					backGroun.setAttribute("src", "pressureBuilding.jpg")
+					lyrics.style.transitionDelay = 0 + "s";
+					lyrics.style.opacity = 0.6;
+					typer2.style.opacity = 1;
+					typing2();
+			}
+			PRSure.onmouseout = function(){
+					actionBox.style.display = "none";
+					lyrics.style.transitionDelay = 0 + "s";
+					lyrics.style.opacity = 1;
+					typer2.style.opacity = 0;
+			}
+
+			STHumn.onmouseover = function(){
+					actionBox.style.display = "block";
+					gifZone.setAttribute("src", "something.gif");
+					backGroun.setAttribute("src", "somethinghuman.jpg")
+					lyrics.style.transitionDelay = 0 + "s";
+					lyrics.style.opacity = 0.6;
+					typer3.style.opacity = 1;
+					typing3();
+			}
+			STHumn.onmouseout = function(){
+					actionBox.style.display = "none";
+					lyrics.style.transitionDelay = 0 + "s";
+					lyrics.style.opacity = 1;
+					typer3.style.opacity = 0;
+			}
+
+			THCgio.onmouseover = function(){
+					actionBox.style.display = "block";
+					gifZone.setAttribute("src", "thought.gif");
+					backGroun.setAttribute("src", "thought.jpg")
+					lyrics.style.transitionDelay = 0 + "s";
+					lyrics.style.opacity = 0.6;
+					typer4.style.opacity = 1;
+					typing4();
+			}
+			THCgio.onmouseout = function(){
+					actionBox.style.display = "none";
+					lyrics.style.transitionDelay = 0 + "s";
+					lyrics.style.opacity = 1;
+					typer4.style.opacity = 0;
+			}
+
+			DIGdwn.onmouseover = function(){
+					actionBox.style.display = "block";
+					gifZone.setAttribute("src", "digdown2.gif");
+					backGroun.setAttribute("src", "digdowndown.jpg")
+					lyrics.style.transitionDelay = 0 + "s";
+					lyrics.style.opacity = 0.6;
+					typer5.style.opacity = 1;
+					typing5();
+			}
+			DIGdwn.onmouseout = function(){
+					actionBox.style.display = "none";
+					lyrics.style.transitionDelay = 0 + "s";
+					lyrics.style.opacity = 1;
+					typer5.style.opacity = 0;
+			}
+
+			TDSide.onclick = function(){
+				buttonSound.play();
+				vidvid.setAttribute("src", "02_vid_darkside.mp4");
+				address.setAttribute("href", "https://youtu.be/e0UWT0dFSQE")
+				opendoor();
+				vidPlayPause();
+			}
+
+			PRSure.onclick = function(){
+				buttonSound.play();
+				vidvid.setAttribute("src", "03_vid_pressure.mp4");
+				address.setAttribute("href", "https://youtu.be/h2eKImKZviw")
+				opendoor();
+				vidPlayPause();
+			}
+
+			STHumn.onclick = function(){
+				buttonSound.play();
+				vidvid.setAttribute("src", "06_vid_somethingHuman.mp4");
+				address.setAttribute("href", "https://youtu.be/azAEHCQgcUI")
+				opendoor();
+				vidPlayPause();
+			}
+
+			THCgio.onclick = function(){
+				buttonSound.play();
+				vidvid.setAttribute("src", "07_vid_thoughtContagion.mp4");
+				address.setAttribute("href", "https://youtu.be/QQ_3S-IQm38")
+				opendoor();
+				vidPlayPause();
+			}
+			DIGdwn.onclick = function(){
+				buttonSound.play();
+				vidvid.setAttribute("src", "10_vid_digdown.mp4");
+				address.setAttribute("href", "https://youtu.be/b4ozdiGys5g")
+				opendoor();
+				vidPlayPause();
+			}
+
+			videoBox.onclick = function(){
+				closedoor();
+				vidPlayPause();
+			}
+			backGroun.onclick = function(){
+				closedoor();
+				vidPlayPause();
+			}
+
+			mainCo.onclick = function(){
+				buttonSound.play();
+				album.style.opacity = 1;
+				setList.style.opacity = 1;
+				lyrics.style.opacity = 1;
+				lyrics.style.right = 0;
+				footer.style.opacity = 1;
+				backGro.style.opacity = 1;
+				centerLine.style.opacity = 1;
+				centerLine2.style.opacity = 1;
+				nocenterLine.style.opacity = 1;
+				nocenterLine.style.right = -1 + "px";
+				
+				mainCo.style.top = -100 + "vh";
+				coverCover.style.top = -100 + "vh";
+			}
+
+			
+	</script>
+</body>
+</html>
