@@ -49,7 +49,7 @@
 		#myName { position: fixed; right: 4%; bottom: 44px; transition: 0.5s; }
 
 		#contentBox1 { transition: 0.4s; position: absolute; left: 0; background: #ffffff; width: 100%; height: 100vh; }
-		#cont0Back { position: absolute; top: 0px; width: 100%; height: 100vh; overflow: hidden; background: #1c1c1c; }
+		#cont0Back { position: absolute; top: 0px; width: 100%; height: 100vh; overflow: hidden; background: #111111; }
 		#cainBack { width: 100%; opacity: 0.1;}
 
 		#contentBox2 { transition: all 0.8s ease 0s; position: absolute; background: #2c2c2c; width: 100%; height: 100vh; left: 0; top: 0vh;}
@@ -78,12 +78,12 @@
 		#coreVBack { transition: 0.2s; width: 100%; opacity: 0; }
 
 		#contentBox11111 { transition: all 0.4s ease 0s; top: 0px; position: absolute; left: 400%; background: #ffffff; width: 100%; height: 100vh; overflow: hidden;  }
-		#logoBox { position: absolute; width: 30vw; height: 30vw; left: 35vw; top: calc(50% - 15vw)	;
+		#logoBox { position: absolute; width: 100vw; height: 100vh; left: 0; top: 0;
 			background: white; }
 		#logoBoxImg { transition: 0.2s; position: absolute;
-			left: 0; width: 30vw; }
+			left: 0; width: 100%; }
 		#logoBoxImg2 { transition: 0.2s; position: absolute;
-			left: 0; width: 30vw; opacity: 0; }
+			left: 0; width: 100%; opacity: 0; }
 		#waggus { position: absolute; left: 0; width: 100%; opacity: 0; }
 
 		#waggu { width: 100%; }
@@ -102,17 +102,16 @@
 		#museAlbum { position: relative; width: 10vw; height: 10vw; background: blue; }
 		#museCover { position: relative; left: 0.2vw; top: 0.2vw; width: 9.6vw;  }
 
-		#contentG { transition: all 0.4s ease 0s; top: 100vh; position: absolute; left: 0px; height: 0px;
-			background: black; width: 100%; height: 100vh; overflow: hidden; }
+		#contentG { transition: all 0.8s ease 0s; top: 100vh; position: absolute; left: 0px; height: 0px;
+			background: black; width: 100%; height: 100vh; overflow: hidden; opacity: 0; }
 
-		#toFirst { position: absolute; left: 13vw; bottom: 15vh; }
 
-		#pfBox { background: #0025a4; position: fixed; bottom: -50%; transition: 0.5s; cursor: pointer; }
-		#bxBox { background: #ff7f00; position: fixed; top: -50%; transition: 0.5s; cursor: pointer; }
+		#pfBox { background: #0025a4; opacity: 0.8; position: fixed; bottom: -50%; transition: 0.5s; cursor: pointer; }
+		#bxBox { background: #ff7f00; opacity: 0.8; position: fixed; top: -50%; transition: 0.5s; cursor: pointer; }
 
-		#bxText { position: fixed; left: 0; top: calc(-25% - 4vw);
+		#bxText { position: fixed; left: 0; top: calc(-25% - 5vh);
 			vertical-align: middle; color: #ff7f00; cursor: pointer; width: 100vw; text-align: center; }
-		#pfText { position: fixed; left: 0; bottom: calc(-25% - 4vw);
+		#pfText { position: fixed; left: 0; bottom: calc(-25% - 5vh);
 			vertical-align: middle; color: #ffffff; cursor: pointer; width: 100vw; text-align: center; }
 
 		.bubblee { transition: 0.2s; float: left; border-radius: 18vw; width: 18vw; height: 18vw;}
@@ -123,6 +122,7 @@
 		.redblack { color: #C10000; }
 		.orange { color: #ff7f00; }
 		.bGrey { color: #2c2c2c; }
+		.grey { color : #939393; }
 		.lGrey { color: #c1c1c1; }
 		.white { color: #ffffff; }
 		.blue { color: #0025a4; }
@@ -136,6 +136,7 @@
 		.nameFont { font-size: 1vw; }
 		.bigFont { font-size: 4vw; line-height: 1.2em; }
 		.expFont { word-break: keep-all; font-size: 0.9vw; line-height: 1.72em; }
+		.contactFont { word-break: keep-all; font-size: 1vw; line-height: 1.72em; }
 
 		.bubbleText { line-height: 1.3em; cursor: default; }
 		.bubbleText2 { line-height: 0em; padding-top: 9vw; cursor: default; }
@@ -154,6 +155,7 @@
 		.a3Poster { width: 8.2vw; height: 11.8vw; background: rgba(0,0,0,0.4); }
 		.a3PosterD { width: 16.8vw; height: 11.8vw ; background: rgba(0,0,0,0.4); }
 		.a3PosterDD { width: 16.8vw; height: 23.6vw; background: rgba(0,0,0,0.4); }
+		.webSite { width: 21vw; height: 11.8vw ; background: rgba(0,0,0,0.4); }
 		.backstage { width: 39.6vw; height: 23.6vw; background: rgba(0,0,0,0.4); }
 		.galExptext { width: 20vw; height: 11.8vw; background: transparent; }
 
@@ -173,6 +175,14 @@
 		#poster190 { left: 13vw; top: calc(7.5vh + 24vw); }
 		#backstage18 { left: 30.2vw; top: 7.5vh; }
 		#explainText { right: 13vw; top: 7.5vh; position: absolute; transition: 0.4s; }
+
+		#contactBox { transition: 0.8s; background: #1c1c1c; position: absolute; left:0; top: -100vh; width: 100%; height: 100vh; z-index: 2; overflow: hidden;}
+		#contactCont { transition: 0.8s; opacity: 0; }
+		hr.one { position: relative; left: -4.7vw; width: 45.5vw; }
+
+		#videoBox { position: absolute; top: 0px; left: 0px; width: 100vw; height: 100vh; background: rgba(0,0,0,0.8); opacity: 0; transition: 0.4s; }
+		#introMovieBox { position: absolute; top: 8vh; left: 13vw; width: 74vw; height: calc(74vw / 16 * 9); background: #0025a4; }
+		#introMov { position: absolute; width: 100%; left: 0; top: 0; }
 
 		.acenter { text-align: center; }
 		.aRight { text-align: right; }
@@ -203,6 +213,7 @@
 		.contentText { padding: 10.5vh 2.5vw 0px 13vw; width: 26vw;}
 		.contentText2 { padding: 10.5vh 2.5vw 0px 13vw; width: 40vw;}
 		.contentRText { padding: 10.5vh 13vw 0 2.5vw; width: 45.5vw;}
+		.contentRText2 { padding: 0vh 13vw 0 2.5vw; width: 45.5vw;}
 		.contentRRText { padding: 8.5vh 13vw 0 1vw; width: 26vw;}
 		.gallery { position: relative; padding: 12vh 13vw 0 13vw; width: 74vw; }
 
@@ -211,7 +222,11 @@
 		.vidBox { position: relative; width: 26vw; height: 5vh; margin: 0px; cursor: pointer; }
 		.vidBox:hover { background: #0025a4; }
 		.halfBox { width: 100%; height: 50%; }
-		.halfText { margin: 0; font-size: 12.5vw; transition: 0.5s; }
+		.halfText { margin: 0; font-size: 5vw; transition: 0.5s; }
+
+		#toFirst { position: absolute; left: 13vw; top: 65vh; cursor: pointer; }
+		#toFirst:hover { color: #ffffff; background: #0025a4;}
+
 
 	</style>
 </head>
@@ -229,7 +244,7 @@
 	</div>
 	<div id="remoteC">
 		<div id="nameBox">
-			<a href="index.html" class="nameFont robotoS white"><span id="JSH">Seonghun Jang</span></a>
+			<a href="index.html" class="nameFont robotoS white"><span id="JSH">BXDesigner & Bassist</span></a>
 		</div>
 		<div id="menuBox" class="fRight">
 			<ul class="uili">
@@ -245,7 +260,7 @@
 	<div id="bback">
 		<img id="backG" src="cainmain1.jpg">
 		<div id="headLine">
-			<p class="orange headFont bold roboto">Band eXperience Design & Performances</p>
+			<p class="orange headFont bold roboto">Band eXperience Design & Rock Bass Performances</p>
 			<p class="orange bodyFont roboto">in Hankyong Nat'l University Rock Band, CAIN</p>
 			</div>
 		<div id="myName">
@@ -301,10 +316,9 @@
 	</div>
 	<div id="contentBox11111" class="fLeft" style="display: none;">
 		<div class="fLeft">
-			<img id="waggus" src="waggus.png">
 			<div id="logoBox">
-				<img id="logoBoxImg" src="cainLogoframe.png">
-				<img id="logoBoxImg2" src="cainlogofullcolor.png">
+				<img id="logoBoxImg" src="newaggus.jpg">
+				<img id="logoBoxImg2" src="newaggus22.jpg">
 			</div>
 		</div>
 	</div>
@@ -349,13 +363,15 @@
 				<p id="typebody" class="contentFont white notoK bold">헤드라인 타입 영문: Rockwell Condensed Bold<br>
 				카인의 영문 헤드라인 서체입니다. 록 음악에는 촉촉하고 감성적이고 우아한 음악에 힘 있고 유쾌한 음악까지 다양한 장르를 아우르기 때문에 세리프와 산세리프의 중간적인 느낌을 띄면서 적절한 힘이 느껴지는 서체를 선택했습니다. 이름 역시 Rock을 Well하게 해줄 것만 같아 카인의 서체로 적절하다고 생각했습니다.</p></div>
 		</div>
-		<div id="toFirst"><p class="notoK bigFont white bold">처음으로</p></div>
+		<div id="toFirst"><p class="roboto contentFont lGrey bold">◀BACK</p></div>
 	</div>
 	<div id="contentBox2222" style="display: none">
 		<img id="vidBack" src="2018-1-Back.png" class="performBack">
 		<img id="vidBack01" src="2017-2-Back.png" class="performBack opazero">
 		<img id="vidBack02" src="southandnorth.png" class="performBack opazero">
 		<img id="vidBack03" src="ssam001.png" class="performBack opazero">
+		<img id="vidBack04" src="2019-00-Back.jpg" class="performBack opazero">
+		<img id="vidBack05" src="hknuFestival001.jpg" class="performBack opazero">
 		<div class="mainContentR fLeft">
 			<iframe id="iframeX" class="vidvid" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
@@ -388,7 +404,7 @@
 			</div>
 		</div>
 		<div id="sTheory" class="fRight">
-			<a id="sTheroyLink" style="width: 100%" href="https://raylit.github.io/Fuucckkinggithub/" class="fRight white roboto contentFont" target="_blank">
+			<a id="sTheroyLink" style="width: 100%" href="simulationTheory.html" class="fRight white roboto contentFont" target="_blank">
 			<div id="museAlbum" class="fRight"><img id="museCover" src="cover.jpg"></div>
 			<div style="position: relative; right: 0.8vw; top: 1.2vw;" class="fRight bold aRight"><p>MUSE<br>Simulation Theory<br>8th Album</p><p class="robotoS headFont">Watch Latest MV of MUSE</p></div></a>
 		</div>
@@ -410,6 +426,11 @@
 		<div id="bassName">
 			<p class="white bigFont roboto">Bassist</p>
 			<p class="white bigFont bold roboto">Seonghun Jang</p>
+		</div>
+		<div id="videoBox">
+			<div id="introMovieBox">
+				<video id="introMov" src="introMov.mp4" type="video/mp4" preload="auto">
+			</div>
 		</div>
 	</div>
 	
@@ -435,8 +456,8 @@
 			<div id="poster18" class="galContents a3PosterDD fLeft">
 				<img id="galCont4" class="galImg" src="2018-2-poster.png">
 			</div>
-			<div id="leaflet18" class="galContents a3PosterD fLeft">
-				<img id="galCont5" class="galImg" src="2018-2-leaflet-11.png">
+			<div id="leaflet18" class="galContents webSite fLeft">
+				<a href="https://www.youtube.com/channel/UCYRnYGgqNnH_c0li6y0KF7g" target="_blank"><img id="galCont5" class="galImg" src="cainYoutube.png"></a>
 			</div>
 			<div id="backstage18" class="galContents a3PosterD fLeft ">
 				<img id="galCont6" class="galImgHoriz" src="jacket002.jpg">
@@ -450,13 +471,43 @@
 			</div>
 		</div>
 	</div>
+
+	<div id="contactBox" style="display: block;">
+		<div id ="contactCont">
+			<div class="mainContent fLeft">
+				<img src="contactImage.jpg" style="position: absolute; left:0; top:0; width:37vw" >
+				<div class="contentText fLeft" style="height: 100vh">
+					<p class="contactFont bold roboto white">Hello.</p>
+				</div>
+			</div>
+			<div class="mainContentR fLeft">
+				<div class="contentRText">
+					<p class="headFont bold robotoS orange">Contact<br><br></p>
+					<p class="contactFont bold roboto white">E-MAIL</p>
+					<p class="contactFont bold roboto lGrey">superockspace@naver.com<br><br></p>
+					<p class="contactFont bold roboto white">PHONE</p>
+					<p class="contactFont bold roboto lGrey">+82 10 3912 5878<br><br></p>
+					<p class="contactFont bold roboto white">INSTAGRAM</p>
+					<a href="https://www.instagram.com/seonghun_m_j" target="_blank" ><p class="contactFont bold roboto lGrey">@seonghun_m_j</p></a>
+				</div>
+				<br><br><br><br><br><br><br><hr class="one lGrey"><br><br>
+				<div class="contentRText2">
+					<p class="expFont bold roboto lGrey fLeft">
+						2019 HKNU DESIGN<br>Digital Project<br><br><br>Band eXperience Design & Rock Bass Performances<br>in Hankyong Nat’l University Rock Band CAIN<br><br><br></p>
+					<p class="expFont bold notoK grey fRight aRight">대학 생활의 대부분을 교내 록 밴드 동아리<br>카인에서 베이시스트로 활동했던<br>디자인학과 학생 장성훈이<br>밴드 카인의 시각 이미지를 개선했던 작업과<br>베이시스트로 공연에 참여했던 활동들을 보여주는<br>포트폴리오 사이트입니다.</p>
+				</div>
+			</div>
+		</div>
+	</div>
 	
 	<div id="bxBox" class="halfBox"></div>
-	<p id="bxText" class="halfText roboto bold">Band X Design</p>	
+	<p id="bxText" class="halfText roboto bold">Designer JSH : Band eXperience Design</p>	
 	<div id="pfBox" class="halfBox"></div>
-	<p id="pfText" class="halfText roboto bold">Performance</p>
+	<p id="pfText" class="halfText roboto bold">Bassist JSH : Rock Band Performer </p>
 </body>
 <script type="text/javascript">
+
+	var coolTime = false;
 
 	remoteGuide.onmouseover = function(){
 		remoteC.style.top = "0px";
@@ -482,18 +533,19 @@
 		myName.style.opacity = 0;
 
 		bxBox.style.top = "0%";
-		bxText.style.top = "calc(20% - 5vh)";
+		bxText.style.top = "calc(25% - 5vh)";
 		pfBox.style.bottom = "0%";
-		pfText.style.bottom = "calc(20% - 5vh)";
+		pfText.style.bottom = "calc(25% - 5vh)";
 	}
 	bback.onmousewheel = function(){
+		
 		headLine.style.opacity = 0;
 		myName.style.opacity = 0;
 
 		bxBox.style.top = "0%";
-		bxText.style.top = "calc(20% - 5vh)";
+		bxText.style.top = "calc(25% - 5vh)";
 		pfBox.style.bottom = "0%";
-		pfText.style.bottom = "calc(20% - 5vh)";
+		pfText.style.bottom = "calc(25% - 5vh)";
 	}
 	
 	bxBox.onmouseover = function(){
@@ -502,7 +554,7 @@
 		pfBox.style.background = "#ffffff";
 		pfText.style.color = "#ffffff"; }
 	bxBox.onmouseout = function(){
-		bxBox.style.opacity = 1;
+		bxBox.style.opacity = 0.8;
 		bxText.style.color = "#ff7f00";
 		pfBox.style.background = "#0025a4";
 		pfText.style.color = "#0025a4";}
@@ -512,7 +564,7 @@
 		pfBox.style.background = "#ffffff";
 		pfText.style.color = "#ffffff";}
 	bxText.onmouseout = function(){
-		bxBox.style.opacity = 1;
+		bxBox.style.opacity = 0.8;
 		bxText.style.color = "#ff7f00";
 		pfBox.style.background = "#0025a4";
 		pfText.style.color = "#0025a4"}
@@ -521,22 +573,22 @@
 	pfBox.onmouseover = function(){
 		bxBox.style.background = "#ffffff";
 		bxText.style.color = "#ffffff";
-		pfBox.style.opacity = 0.2;
+		pfBox.style.opacity = 0.5;
 		pfText.style.color = "#ffffff";	}
 	pfBox.onmouseout = function(){
 		bxBox.style.background = "#FF7F00";
 		bxText.style.color = "#FF7F00";
-		pfBox.style.opacity = 1;
+		pfBox.style.opacity = 0.8;
 		pfText.style.color = "white"; }
 	pfText.onmouseover = function(){
 		bxBox.style.background = "#ffffff";
 		bxText.style.color = "#ffffff";
-		pfBox.style.opacity = 0.2;
+		pfBox.style.opacity = 0.5;
 		pfText.style.color = "#ffffff"; }
 	pfText.onmouseout = function(){
 		bxBox.style.background = "#FF7F00";
 		bxText.style.color = "#FF7F00";
-		pfBox.style.opacity = 1;
+		pfBox.style.opacity = 0.8;
 		pfText.style.color = "white"; }
 
 	function bxStart() {
@@ -547,7 +599,8 @@
 		bxText.style.top = "-100%";
 		pfText.style.display = "none";
 
-		bandXDesign.style.color = "#ff7f00";
+		bandXDesign.style.color = "#2c2c2c";
+		bandXDesign.style.background = "white";
 		bback.style.display = "none";
 		
 	}
@@ -591,7 +644,8 @@
 
 	function pffStart() {
 		contentBox22.style.background = "#2c2c2c";
-		perFormance.style.color = "#0025a4";
+		perFormance.style.color = "#2c2c2c";
+		perFormance.style.background = "white";
 		remoteGuide.style.zIndex = 4;
 		remoteC.style.top = 0;
 	}
@@ -610,6 +664,7 @@
 		contentBoxB3.style.display = "none";
 		contentBoxB4.style.display = "none";
 		bandXDesign.style.color = "white";
+		bandXDesign.style.background = "transparent";
 		document.body.style.background = "#000000";
 	}
 	function pfClose(){
@@ -627,19 +682,32 @@
 		contentBox222.style.display = "none";
 		contentBox2222.style.display = "none";
 		perFormance.style.color = "white";
+		perFormance.style.background = "transparent";
 		document.body.style.background = "#fbffe1";
 	}
 
 	function glClose(){
 		contentG.style.top = "100vh"
-		gaLlery.style.color = "white"
+		contentG.style.opacity = 0;
+		gaLlery.style.color = "white";
+		gaLlery.style.background = "transparent";
+	}
+
+	function ctClose(){
+		conTact.style.color = "white";
+		conTact.style.background = "transparent";
+		contactBox.style.top = "-100vh"
+		contactCont.style.opacity = "0";
+		contactCont.style.transitionDelay = "0s";
 	}
 
 	bandXDesign.onclick = function() {
 		bxStart();
 		pfClose();
 		glClose();
-		bandXDesign.style.color = "#ff7f00";
+		ctClose();
+		bandXDesign.style.color = "#2c2c2c";
+		bandXDesign.style.background = "white"
 		remoteC.style.transitionDelay = "0s";
 	}
 
@@ -647,25 +715,49 @@
 		pfStart();
 		bxClose();
 		glClose();
-		perFormance.style.color = "#0025a4"
+		ctClose();
+		perFormance.style.color = "#2c2c2c";
+		perFormance.style.background = "white"
 		remoteC.style.transitionDelay = "0s";
 	}
 	gaLlery.onclick = function() {
 		pfClose();
 		bxClose();
-		gaLlery.style.color = "#E2FF66"
+		ctClose();
+		gaLlery.style.color = "#2c2c2c";
+		gaLlery.style.background = "white"
 		contentG.style.top = "0px"
+		contentG.style.opacity = 1;
 	}
 	contentBox1.onmousewheel = function() {
+		if(coolTime == false){
+			contentBox1.style.left = "-100%";
+			contentBox11.style.left = "0%";
+			contentBox111.style.left = "100%";
+			contentBox1111.style.left = "200%";
+			contentBox11111.style.left = "300%";
+			remoteC.style.top = "-80px";
+			coolTime = true;
+			setTimeout(function(){
+				coolTime = false;
+			}, 800);
+		}
+	}
+	contentBox1.onclick = function() {
 		contentBox1.style.left = "-100%";
 		contentBox11.style.left = "0%";
 		contentBox111.style.left = "100%";
 		contentBox1111.style.left = "200%";
 		contentBox11111.style.left = "300%";
 		remoteC.style.top = "-80px";
-	}
+		}
 
 	contentBox11.onmousewheel = function(e) {
+	if(coolTime == false){
+		coolTime = true;
+		setTimeout(function(){
+			coolTime = false;
+		}, 800);
 		if(e.deltaY>0){
 			contentBox1.style.left = "-200%";
 			contentBox11.style.left = "-100%";
@@ -681,11 +773,23 @@
 			contentBox11111.style.left = "400%";
 			remoteC.style.top = "0px";
 		}
-		
+		}
+	}
+	contentBox11.onclick = function(){
+		contentBox1.style.left = "-200%";
+		contentBox11.style.left = "-100%";
+		contentBox111.style.left = "0%";
+		contentBox1111.style.left = "100%";
+		contentBox11111.style.left = "200%";
 	}
 
 	var toggle = "off"
 	contentBox111.onmousewheel = function(e) {
+	if(coolTime == false){
+		coolTime = true;
+		setTimeout(function(){
+			coolTime = false;
+		}, 800);
 		if(e.deltaY<0){
 			toggle = "off"
 			contentBox1.style.left = "-100%";
@@ -713,10 +817,32 @@
 				contentBox11111.style.left = "100%";
 			}
 		}
-		
+		}
 	}
+
+	contentBox111.onclick = function(){
+		if(toggle == "off"){
+			toggle = "on"
+			joyfulSlogan.style.top = "0px";
+			idenText.style.top = "0vh";
+			idenText.style.fontSize = "3em";
+			idenText.style.transitionDelay = "0.2s";
+		}else if(toggle == "on"){
+			contentBox1.style.left = "-300%";
+			contentBox11.style.left = "-200%";
+			contentBox111.style.left = "-100%"
+			contentBox1111.style.left = "0%";
+			contentBox11111.style.left = "100%";
+		}
+	}
+
 	var toggle2 = "off"
 	contentBox1111.onmousewheel = function(e) {
+	if(coolTime == false){
+		coolTime = true;
+		setTimeout(function(){
+			coolTime = false;
+		}, 800);
 		if(e.deltaY<0){
 			toggle2 = "off"
 			contentBox1.style.left = "-200%";
@@ -762,6 +888,32 @@
 			}
 		}
 	}
+	}
+	contentBox1111.onclick = function(){
+		if(toggle2 == "off"){
+				toggle2 = "on"
+				document.getElementById("coreValue").innerHTML = "Design<br>Core value";
+				document.getElementById("bub01").innerHTML = "활동적이고 열정적인 디자인";
+				document.getElementById("bub02").innerHTML = "알록달록하고 쿨한 디자인";
+				document.getElementById("bub03").innerHTML = "단순하고 따라하기 쉬운 디자인";
+				valueText.style.color = "white";
+				bubble11.style.background = "#C10000";
+				bubble11.style.color = "white";
+				bubble22.style.background = "#ff7f00";
+				bubble22.style.color = "white";
+				bubble33.style.background = "#0013C1";
+				bubble33.style.color = "white";
+				coreBack.style.background = "black";
+				coreVBack.style.opacity = 0.5;
+			}else if(toggle2 == "on"){
+				toggle2 = "off"
+				contentBox1.style.left = "-400%";
+				contentBox11.style.left = "-300%";
+				contentBox111.style.left = "-200%"
+				contentBox1111.style.left = "-100%";
+				contentBox11111.style.left = "0%";
+			}
+	}
 
 	var h  = window.innerHeight;
 	console.log(h);
@@ -769,6 +921,11 @@
 
 	var toggle3 = "off"
 	contentBox11111.onmousewheel = function(e) {
+	if(coolTime == false){
+		coolTime = true;
+		setTimeout(function(){
+			coolTime = false;
+		}, 800);
 		if(e.deltaY<0){
 			toggle3 = "off"
 			contentBox1.style.left = "-300%";
@@ -779,25 +936,40 @@
 
 			logoBoxImg.style.opacity = 1;
 			logoBoxImg2.style.opacity = 0;
-			waggus.style.opacity = 0;
-			logoBox.style.boxShadow = "none";
 		}else if(e.deltaY>0){
 			if(toggle3 == "off"){
 				toggle3 = "on"
 				logoBoxImg.style.opacity = 0;
 				logoBoxImg2.style.opacity = 1;
-				waggus.style.opacity = 1;
-				logoBox.style.boxShadow = "5px 5px 10px black";
+
 			}else if(toggle3 == "on"){
 				toggle3 = "off"
 				contentBox11111.style.top = - h - 1 + "px";
 				contentBoxB1.style.top = 0 + "px";
 			}
 		}
-
-		
+	}		
 	}
+
+	contentBox11111.onclick = function(){
+			if(toggle3 == "off"){
+				toggle3 = "on"
+				logoBoxImg.style.opacity = 0;
+				logoBoxImg2.style.opacity = 1;
+
+			}else if(toggle3 == "on"){
+				toggle3 = "off"
+				contentBox11111.style.top = - h - 1 + "px";
+				contentBoxB1.style.top = 0 + "px";
+			}
+	}
+
 	contentBoxB1.onmousewheel = function(e) {
+	if(coolTime == false){
+		coolTime = true;
+		setTimeout(function(){
+			coolTime = false;
+		}, 800);
 		if(e.deltaY<0){
 			contentBox11111.style.top = "0px";
 			contentBoxB1.style.top = "100vh";
@@ -806,10 +978,20 @@
 			contentBoxB2.style.top = "0px";
 		}
 	}
+	}
+	contentBoxB1.onclick = function(){
+		contentBoxB1.style.top = - h - 1 + "px";
+		contentBoxB2.style.top = "0px";
+	}
 
 	var ranK = "rank1";
 
 	contentBoxB2.onmousewheel = function(e){
+	if(coolTime == false){
+		coolTime = true;
+		setTimeout(function(){
+			coolTime = false;
+		}, 800);
 		if(e.deltaY<0){
 			if(ranK == "rank1"){
 				contentBoxB1.style.top = "0px";
@@ -859,10 +1041,42 @@
 			}
 		}
 	}
+	}
+
+	contentBoxB2.onclick = function(){
+		if(ranK == "rank1"){
+				ranK = "rank2"
+				lgs0.style.opacity = 0;
+				lgs1.style.opacity = 1;
+				lgs2.style.opacity = 0;
+			}else if(ranK == "rank2"){
+				ranK = "rank3"
+				lgs0.style.opacity = 0;
+				lgs1.style.opacity = 0;
+				lgs2.style.opacity = 1;
+				lgs3.style.opacity = 0;
+			}else if(ranK == "rank3"){
+				ranK = "rank4"
+				lgs0.style.opacity = 0;
+				lgs1.style.opacity = 0;
+				lgs2.style.opacity = 1;
+				lgs2.style.top = "calc(50vh - 270px)";
+				lgs3.style.opacity = 1;
+				lgs3.style.top = "calc(50vh - 70px)";
+			}else if(ranK == "rank4"){
+				contentBoxB2.style.top = - h - 1 + "px";
+				contentBoxB3.style.top = "0px";
+			}
+	}
 
 	var ranKK = "rank1"
 
 	contentBoxB3.onmousewheel = function(e){
+	if(coolTime == false){
+		coolTime = true;
+		setTimeout(function(){
+			coolTime = false;
+		}, 800);
 		if(e.deltaY<0){
 			if(ranKK == "rank1"){
 				contentBoxB2.style.top = "0px";
@@ -889,10 +1103,30 @@
 			}
 		}
 	}
+	}
+
+	contentBoxB3.onclick = function(){
+			if(ranKK == "rank1"){
+				ranKK = "rank2"
+				contentBoxB3.style.background = "#E2FF66";
+				colorHead.style.color = "#ff7f00";
+				colorBody.style.color = "#ff7f00";
+				document.getElementById("colorBody").innerHTML = "배경색인 밝은 그린 컬러는 구성원 간의 조화와 편안하고 따뜻한 동아리 방의 분위기를 상징합니다.";
+
+			}else if(ranKK == "rank2"){
+				contentBoxB4.style.top = "0px";
+				contentBoxB3.style.top = "-100vh";
+			}
+	}
 
 	var level = "lv1"
 
 	contentBoxB4.onmousewheel = function(e){
+	if(coolTime == false){
+		coolTime = true;
+		setTimeout(function(){
+			coolTime = false;
+		}, 800);
 		if(e.deltaY<0){
 			if(level == "lv1"){
 				contentBoxB4.style.top = "100vh";
@@ -929,34 +1163,91 @@
 				document.getElementById("typebody").innerHTML = "바디 타입 영문: HK Grotesk<br>바디 타입 한글: 윤고딕 500";
 			}else if(level == "lv3"){
 				contentG.style.top = "0px"
+				contentG.style.opacity = 1;
 				bandXDesign.style.color = "white"
-				gaLlery.style.color = "#E2FF66"
+				bandXDesign.style.background = "transparent"
+				gaLlery.style.color = "#2c2c2c"
+				gaLlery.style.background = "white";
 			}
 
 		}
 	}
+	}
+
+	contentBoxB4.onclick = function(){
+			if(level == "lv1"){
+				level = "lv2"
+				typeimg.style.opacity = 0;
+				typeimg2.style.opacity = 1;
+				typeimg.style.transitionDelay = "0s";
+				typeimg2.style.transitionDelay = "0.4s";
+				document.getElementById("typebody").innerHTML = "헤드라인 타입 한글: Rix독립명조 (Condensed)<br>Rockwell의 굵직한 세리프와 조화롭게 섞어 짤 수 있는 서체를 선택했습니다.";
+			}else if(level == "lv2"){
+				level = "lv3"
+				typeimg2.style.opacity = 0;
+				typeimg3.style.opacity = 1;
+				typeimg2.style.transitionDelay = "0s";
+				typeimg3.style.transitionDelay = "0.4s";
+				document.getElementById("typebody").innerHTML = "바디 타입 영문: HK Grotesk<br>바디 타입 한글: 윤고딕 500";
+			}else if(level == "lv3"){
+				contentG.style.top = "0px"
+				contentG.style.opacity = 1;
+				bandXDesign.style.color = "white"
+				bandXDesign.style.background = "transparent"
+				gaLlery.style.color = "#2c2c2c"
+				gaLlery.style.background = "white";
+			}
+	}
+
+	var intMov = "off"
 	contentBox2.onclick = function(){
-		perFormance.style.color = "#0025a4";
-		remoteGuide.style.zIndex = 4;
-		document.body.style.background = "#000000";
-		contentBox2.style.top = "-100vh";
-		bassistJSH.style.opacity = 0;
-		bassName.style.opacity = 0;
-		bassHead.style.opacity = 0;
-		contentBox22.style.opacity = 1;
-		remoteC.style.top = 0;
+		if(intMov == "off"){
+			intMov = "on";
+			videoBox.style.opacity = 1;
+			introMov.play();
+
+		}else if(intMov == "on"){
+			intMov = "off"
+			perFormance.style.color = "#2c2c2c";
+			perFormance.style.background = "white";
+			remoteGuide.style.zIndex = 4;
+			document.body.style.background = "#000000";
+			contentBox2.style.top = "-100vh";
+			bassistJSH.style.opacity = 0;
+			bassName.style.opacity = 0;
+			bassHead.style.opacity = 0;
+			contentBox22.style.opacity = 1;
+			remoteC.style.top = 0;
+			introMov.pause();
+		}
 	}
 
 	contentBox2.onmousewheel = function(){
-		perFormance.style.color = "#0025a4";
-		remoteGuide.style.zIndex = 4;
-		document.body.style.background = "#000000";
-		contentBox2.style.top = "-100vh";
-		bassistJSH.style.opacity = 0;
-		bassName.style.opacity = 0;
-		bassHead.style.opacity = 0;
-		contentBox22.style.opacity = 1;
-		remoteC.style.top = 0;
+	if(coolTime == false){
+		coolTime = true;
+		setTimeout(function(){
+			coolTime = false;
+		}, 800);
+		if(intMov == "off"){
+			intMov = "on";
+			videoBox.style.opacity = 1;
+			introMov.play();
+
+		}else if(intMov == "on"){
+			intMov = "off"
+			perFormance.style.color = "#2c2c2c";
+			perFormance.style.background = "white";
+			remoteGuide.style.zIndex = 4;
+			document.body.style.background = "#000000";
+			contentBox2.style.top = "-100vh";
+			bassistJSH.style.opacity = 0;
+			bassName.style.opacity = 0;
+			bassHead.style.opacity = 0;
+			contentBox22.style.opacity = 1;
+			remoteC.style.top = 0;
+			introMov.pause();
+		}
+	}
 	}
 
 	contentBox22.onclick = function(){
@@ -965,8 +1256,14 @@
 		contentBox22.style.opacity = 0;
 		contentBox222.style.opacity = 1;
 		remoteC.style.top = "-80px";
+		introMov.pause();
 	}
 	contentBox22.onmousewheel = function(e){
+	if(coolTime == false){
+		coolTime = true;
+		setTimeout(function(){
+			coolTime = false;
+		}, 800);
 		if(e.deltaY>0){
 			contentBox22.style.transitionDelay = "0s";
 			contentBox22.style.top = "-100vh";
@@ -974,7 +1271,9 @@
 			contentBox222.style.opacity = 1;
 			contentBox222.style.transitionDelay = "0.8s";
 			remoteC.style.top = "-80px";
+			introMov.pause();
 		}
+	}
 	}
 
 	contentBox222.onclick = function(){
@@ -982,9 +1281,16 @@
 		contentBox222.style.top = "-100vh";
 		contentBox222.style.opacity = 0;
 		contentBox2222.style.opacity = 1;
+		introMov.pause();
 	}
 
 	contentBox222.onmousewheel = function(e){
+	if(coolTime == false){
+		introMov.pause();
+		coolTime = true;
+		setTimeout(function(){
+			coolTime = false;
+		}, 800);
 		if(e.deltaY<0){
 			contentBox222.style.transitionDelay = "0s";
 			contentBox222.style.opacity = 0;
@@ -999,8 +1305,14 @@
 			contentBox2222.style.transitionDelay = "0.8s";
 		}
 	}
+	}
 
 	contentBox2222.onmousewheel = function(e){
+	if(coolTime == false){
+		coolTime = true;
+		setTimeout(function(){
+			coolTime = false;
+		}, 800);
 		if(e.deltaY<0){
 			contentBox2222.style.opacity = 0;
 			contentBox2222.style.transitionDelay = "0s";
@@ -1009,11 +1321,14 @@
 			contentBox222.style.opacity = 1;
 		}
 	}
+	}
 	vidno1.onclick = function() {
 		vidBack.style.opacity = 0;
 		vidBack01.style.opacity = 0.6;
 		vidBack02.style.opacity = 0;
 		vidBack03.style.opacity = 0;
+		vidBack04.style.opacity = 0;
+		vidBack05.style.opacity = 0;
 		iframeX.setAttribute("src", "https://www.youtube.com/embed/RmnA09w8flA?list=PLGKeKmjjoPYylf2TSiVKqMiguvXEyo9Sy")
 		document.getElementById("videoHead").innerHTML = "Without A Fight - Hoobastank"
 		document.getElementById("videoText").innerHTML = "2017년 2학기 카인 정기공연.<br>군 복무를 마치고 본격적으로 밴드 활동을 시작한 시기의 공연입니다. 꾸준히 연습해서 제법 무르익어 보이는 연주가 가능해졌지만 아직 코러스는 버거워보입니다.";
@@ -1023,6 +1338,8 @@
 		vidBack01.style.opacity = 0;
 		vidBack02.style.opacity = 0.6;
 		vidBack03.style.opacity = 0;
+		vidBack04.style.opacity = 0;
+		vidBack05.style.opacity = 0;
 		iframeX.setAttribute("src", "https://www.youtube.com/embed/7wFmOsJpWy8?list=PLGKeKmjjoPYxbrB2Cp7VFLoRTNoqLImmF")
 		document.getElementById("videoHead").innerHTML = "Hysteria - MUSE"
 		document.getElementById("videoText").innerHTML = "2018년 1학기 카인 정기공연.<br>제가 지금까지 베이스를 치게 만든 노래, <br>MUSE의 Hysteria를 공연했습니다.<br> 지금 보니 퀄리티는 다소 아쉽지만 그래도 이 곡을 공연했다는 사실만으로도 행복했던 공연이였습니다.";
@@ -1032,26 +1349,42 @@
 		vidBack01.style.opacity = 0;
 		vidBack02.style.opacity = 0;
 		vidBack03.style.opacity = 0.6;
+		vidBack04.style.opacity = 0;
+		vidBack05.style.opacity = 0;
 		iframeX.setAttribute("src", "https://www.youtube.com/embed/2jwcCcddhuE?list=PLcoQAaj9Z8f6-Op0CMt4z6Bxixunljpsm")
 		document.getElementById("videoHead").innerHTML = "Don't Stop Me Now - Queen"
 		document.getElementById("videoText").innerHTML = "2019년 제4회 쌈합 공연.<br>국립한경대학교 3개의 밴드 동아리의 연합 공연, 쌈합 무대에 올랐었습니다. 공연의 임원으로도 참여했던 이 공연은 정말 좋은 기억 뿐입니다.";
 	}
 	vidno4.onclick = function() {
+		vidBack.style.opacity = 0;
+		vidBack01.style.opacity = 0;
+		vidBack02.style.opacity = 0;
+		vidBack03.style.opacity = 0;
+		vidBack04.style.opacity = 0.6;
+		vidBack05.style.opacity = 0;
+
 		iframeX.setAttribute("src", "https://www.youtube.com/embed/R-qbKKXwqwE")
 		document.getElementById("videoHead").innerHTML = "If You Ask Me Now - H a lot"
 		document.getElementById("videoText").innerHTML = "2019년 신입생 OT 공연.<br>최근에 참여한 2019년 신입생 OT 공연입니다. 근래에 완성도가 높아진 코러스 보컬의 모습을 잘 보여주는 무대라고 생각합니다.";
 	}
 	vidno5.onclick = function() {
-		iframeX.setAttribute("src", "https://www.youtube.com/embed/oPCsUJ0QVFA")
+		vidBack.style.opacity = 0;
+		vidBack01.style.opacity = 0;
+		vidBack02.style.opacity = 0;
+		vidBack03.style.opacity = 0;
+		vidBack04.style.opacity = 0;
+		vidBack05.style.opacity = 0.6;
+		
+		iframeX.setAttribute("src", "https://www.youtube.com/embed/w4Id21Tgg5Y")
 		document.getElementById("videoHead").innerHTML = "Supermassive Blackhole - MUSE"
-		document.getElementById("videoText").innerHTML = "2019년 한경대 축제<br>Coming soon";
+		document.getElementById("videoText").innerHTML = "2019년 한경대 축제<br>가장 최근 모습이 담겨있는 영상입니다.<br>졸업을 앞두고 마지막 교내 공연인 만큼<br>머리를 비우고 그저 무대 위에 있음을 즐겼습니다.";
 	}
 
 	var expRank = "off"
 
 	leaflet18.onmouseover = function() {
 		if(expRank == "off"){
-			document.getElementById("expHead").innerHTML = "카인 Youtube<br>"
+			document.getElementById("expHead").innerHTML = "카인 Youtube<br>클릭하면 이동합니다."
 			document.getElementById("expText").innerHTML = " " 
 			galCont5.style.opacity = 1;
 			gBackground.style.opacity = 0.2;
@@ -1263,6 +1596,7 @@
 	poster190.onclick = function() {
 		if(expRank == "off"){
 			expRank = "on"
+			hiding();
 			document.getElementById("expHead").innerHTML = "당신의 색으로 칠해주세요<br>[2019년 1학기 신입생 모집 포스터]"
 			document.getElementById("expText").innerHTML = "매년 새로운 색깔을 띄는 카인에 새로운 색을 채워줄 사람을 모집하는 의미로 제작된 포스터입니다."
 			poster190.style.width = "50.7vw"
@@ -1280,6 +1614,7 @@
 			explainText.style.opacity = 1;
 		}else if(expRank == "on"){
 			expRank = "off"
+			nHiding();
 			document.getElementById("expHead").innerHTML = "BX Design Gallery" 
 			document.getElementById("expText").innerHTML = "밴드 카인의 아이덴티티를 경험할 수 있는 작업물들을 모아놓은 페이지입니다." 
 			poster190.style.width = "16.8vw"
@@ -1446,5 +1781,28 @@
 		contentBoxB3.style.top = "100vh";
 		contentBoxB4.style.top = "100vh";
 	}
+
+	function ctStart(){
+		bandXDesign.style.color = "white";
+		bandXDesign.style.background = "transparent";
+		perFormance.style.color = "white";
+		perFormance.style.background = "transparent";
+		gaLlery.style.color = "white";
+		gaLlery.style.background = "transparent";
+		conTact.style.color = "#2c2c2c";
+		conTact.style.background = "white";
+
+		contactBox.style.top = "0px";
+		contactCont.style.transitionDelay = "0.8s";
+		contactCont.style.opacity = 1;
+	}
+
+	conTact.onclick = function(){
+		ctStart();	
+	}
+
+
+
+
 </script>
 </html>
